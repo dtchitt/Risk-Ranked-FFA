@@ -146,7 +146,6 @@ export class Round {
 						GameTimer.getInstance().start();
 						GameTracking.getInstance().roundInProgress = true;
 						PlayGlobalSound("Sound\\Interface\\SecretFound.flac");
-						Scoreboard.getInstance().toggleVis(true);
 					} catch (error) {
 						Players.forEach(p => {
 							DisplayTimedTextToPlayer(p.handle, 0, 0, 35.00, `Please screenshot this and send report on discord\nEC:3\n${error}`);
@@ -180,7 +179,6 @@ export class Round {
 				GameTimer.getInstance().start();
 				GameTracking.getInstance().roundInProgress = true;
 				PlayGlobalSound("Sound\\Interface\\SecretFound.flac");
-				Scoreboard.getInstance().toggleVis(true);
 			});
 		})
 	}

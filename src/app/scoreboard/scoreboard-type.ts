@@ -4,6 +4,7 @@ import { HexColors } from "resources/hexColors";
 import { NEUTRAL_HOSTILE } from "resources/constants";
 import { RoundSettings } from "app/game/settings-data";
 import { Alliances } from "app/game/round-allies";
+import { Util } from "libs/translators";
 
 export class Scoreboard {
 	private static instance: Scoreboard;
@@ -70,6 +71,9 @@ export class Scoreboard {
 		Scoreboard.setItemWidth(this.mb, 0.00, this.size, 6);
 
 		let count = 2;
+		this.playersOnBoard = this.playersOnBoard.reverse();
+		Util.ShuffleArray(this.playersOnBoard);
+		
 		this.playersOnBoard.forEach(gPlayer => {
 			this.updateBoard(gPlayer, count, true);
 
@@ -78,7 +82,7 @@ export class Scoreboard {
 
 		MultiboardMinimize(this.mb, true);
 		MultiboardMinimize(this.mb, false);
-		MultiboardDisplay(this.mb, false);
+        this.toggleVis(false);
 	}
 
 	public toggleVis(toggle: boolean) {
