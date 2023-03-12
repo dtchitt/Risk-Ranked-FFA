@@ -72,6 +72,7 @@ export class Trees {
 			}
 
 			newTree = CreateDestructable(newType, objectX, objectY, 270, (Math.random() * (1.20 - 0.80) + 0.80), Math.floor(Math.random() * 10) + 1);
+			SetDestructableMaxLife(newTree, GetDestructableLife(newTree) / 2);
 			this.treeArray.push(newTree);
 
 			newTree = null;
