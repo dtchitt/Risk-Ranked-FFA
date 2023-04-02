@@ -14,7 +14,7 @@ export class Country {
 	public citiesOwned: Map<GamePlayer, number> = new Map<GamePlayer, number>();
 	public allocLim: number;
 
-	public static fromName = new Map<string, Country>();
+	public static fromName = new Map<string, Country>(); //Can be  gotten rid of and use fromCity instead
 	public static fromCity = new Map<City, Country>();
 
 	constructor(name: string, x: number, y: number, ...cities: City[]) {
