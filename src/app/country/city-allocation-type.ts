@@ -4,6 +4,7 @@ import { Util } from "libs/translators";
 import { NEUTRAL_HOSTILE } from "resources/constants";
 import { City } from "./city-type";
 import { Country } from "./country-type";
+import { MessageAll } from "libs/utils";
 
 export class CityAllocation {
 	constructor() { }
@@ -36,6 +37,7 @@ export class CityAllocation {
 				}
 
 				if (gPlayer.cities.length < citiesMax) {
+					MessageAll(true, `Cities Max: ${citiesMax}` + `Cities Length: ${gPlayer.cities.length}`)
 					playerPool.push(gPlayer.player)
 				}
 			}

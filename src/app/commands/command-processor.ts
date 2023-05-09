@@ -93,8 +93,6 @@ export const CommandProcessor = () => {
 
 			case "-restart":
 			case "-ng":
-				if (!GameTracking.canReset) return;
-
 				GameTracking.canReset = false;
 
 				MessageAll(true, `${HexColors.RED}The game has been restarted!|r \n${HexColors.TANGERINE}Please wait while it loads.|r`, 0.62, 0.81);

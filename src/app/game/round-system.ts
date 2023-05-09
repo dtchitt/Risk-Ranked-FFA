@@ -29,7 +29,7 @@ export class Round {
 			this.modes = false;
 			Trees.getInstance();
 			GameTracking.getInstance().leader = this.getRandomPlayer();
-			 //GamePlayer.fromPlayer.get(Player(Math.floor(Math.random() * (GamePlayer.fromPlayer.size - 1)))); <- This caused the game breaking bug on start FML
+			//GamePlayer.fromPlayer.get(Player(Math.floor(Math.random() * (GamePlayer.fromPlayer.size - 1)))); <- This caused the game breaking bug on start FML
 
 			ModeUI.buildModeFrame();
 			FogEnable(true);
@@ -76,7 +76,7 @@ export class Round {
 	public runModeSelection() {
 		ModeUI.toggleModeFrame(true);
 		//MessageAll(false, "Mode Frame Visable", 0, 0);
-		let tick: number = 20;
+		let tick: number = 5;
 		const modeTimer: Timer = new Timer();
 		modeTimer.start(1.00, true, () => {
 			//MessageAll(false, `tick: ${tick}`, 0, 0);
@@ -99,7 +99,7 @@ export class Round {
 			ModeUI.pList(BlzGetFrameByName("EscMenuBackdrop", 0));
 		});
 
-		let counter: number = 0;
+		let counter: number = 5;
 		GamePlayer.fromPlayer.forEach(gPlayer => {
 			if (gPlayer.isObserving()) return;
 			if (gPlayer.isLeft()) return;
@@ -128,7 +128,7 @@ export class Round {
 
 			CityAllocation.start();
 
-			let tick: number = 7;
+			let tick: number = 0;
 			const modeTimer: Timer = new Timer();
 			modeTimer.start(1.00, true, () => {
 				if (tick >= 1) {
@@ -169,7 +169,7 @@ export class Round {
 
 			MessageAll(true, `${HexColors.TANGERINE}The round will start in a few seconds!|r`)
 			this.count++;
-	
+
 			const quickTimer: Timer = new Timer();
 			quickTimer.start(3, false, () => {
 				quickTimer.pause();
