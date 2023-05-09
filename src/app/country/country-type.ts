@@ -54,7 +54,7 @@ export class Country {
 		Country.fromName.set("Central Indonesia", new Country("Central Indonesia", 9403.0, -12231.0, Cities[16], Cities[17], Cities[18], Cities[19]))
 		Country.fromName.set("East Indonesia", new Country("East Indonesia", 11834.25, -11332.25, Cities[20], Cities[21]))
 		Country.fromName.set("Lower Indonesia", new Country("Lower Indonesia", 7995.0, -15559.0, Cities[22], Cities[23]))
-		Country.fromName.set("West Indonesia", new Country("West Indonesia", 4539.0, -12359.0, Cities[24], Cities[25], Cities[26], Cities[27], Cities[28], Cities[29]))
+		Country.fromName.set("West Indonesia", new Country("West Indonesia", 4539.0, -12359.0, Cities[24], Cities[25], Cities[26]))
 	}
 
 	//Public API
