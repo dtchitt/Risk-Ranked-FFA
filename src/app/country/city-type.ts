@@ -88,40 +88,37 @@ export class City {
 
 		//North Papau
 		Cities[4] = new City(17792.0, -8128.0, UID.CITY)
-		Cities[5] = new City(18624.0, -8704.0, UID.CITY)
-		Cities[6] = new City(17984.0, -9600.0, UID.CITY)
+		Cities[5] = new City(17984.0, -9600.0, UID.CITY)
 
 		//West Papau
-		Cities[7] = new City(16640.0, -8960.0, UID.CITY)
-		Cities[8] = new City(16160.0, -9952.0, UID.PORT)
+		Cities[6] = new City(16640.0, -8960.0, UID.CITY)
+		Cities[7] = new City(16160.0, -9952.0, UID.PORT)
 		//South Papau
-		Cities[9] = new City(18624.0, -10688.0, UID.CITY)
-		Cities[10] = new City(18208.0, -12320.0, UID.PORT)
+		Cities[8] = new City(18624.0, -10688.0, UID.CITY)
+		Cities[9] = new City(18208.0, -12320.0, UID.PORT)
 		//Brunei
-		Cities[11] = new City(8384.0, -9792.0, UID.CITY)
-		Cities[12] = new City(8608.0, -8992.0, UID.PORT)
+		Cities[10] = new City(8384.0, -9792.0, UID.CITY)
+		Cities[11] = new City(8608.0, -8992.0, UID.PORT)
 		// //East Malaysia
-		Cities[13] = new City(10368.0, -8128.0, UID.CITY)
-		Cities[14] = new City(9600.0, -8704.0, UID.CITY)
-		Cities[15] = new City(8576.0, -10880.0, UID.CITY)
+		Cities[12] = new City(10368.0, -8128.0, UID.CITY)
+		Cities[13] = new City(9600.0, -8704.0, UID.CITY)
+		Cities[14] = new City(8576.0, -10880.0, UID.CITY)
 		//Central Indonesia
-		Cities[16] = new City(8640.0, -12096.0, UID.CITY)
-		Cities[17] = new City(9856.0, -11392.0, UID.CITY)
-		Cities[18] = new City(10560.0, -9728.0, UID.CITY)
-		Cities[19] = new City(9760.0, -12896.0, UID.PORT)
+		Cities[15] = new City(8640.0, -12096.0, UID.CITY)
+		Cities[16] = new City(9856.0, -11392.0, UID.CITY)
+		Cities[17] = new City(10560.0, -9728.0, UID.CITY)
+		Cities[18] = new City(9760.0, -12896.0, UID.PORT)
 		//East Indonesia
-		Cities[20] = new City(12224.0, -10496.0, UID.CITY)
-		Cities[21] = new City(12544.0, -11456.0, UID.CITY)
+		Cities[19] = new City(12224.0, -10496.0, UID.CITY)
+		Cities[20] = new City(12544.0, -11456.0, UID.CITY)
 		//Lower Indonesia
-		Cities[22] = new City(7104.0, -15040.0, UID.CITY)
-		Cities[23] = new City(8928.0, -15136.0, UID.PORT)
+		Cities[21] = new City(7104.0, -15040.0, UID.CITY)
+		Cities[22] = new City(8928.0, -15136.0, UID.PORT)
 		//West Indonesia
-		Cities[24] = new City(5824.0, -13760.0, UID.CITY)
+		Cities[23] = new City(5824.0, -13760.0, UID.CITY)
+		Cities[24] = new City(4032.0, -11328.0, UID.CITY)
 		Cities[25] = new City(4032.0, -11328.0, UID.CITY)
-		Cities[26] = new City(4032.0, -11328.0, UID.CITY)
-		// Cities[27] = new City(4032.0, -11328.0, UID.CITY)
-		// Cities[28] = new City(4032.0, -11328.0, UID.CITY)
-		// Cities[29] = new City(4032.0, -11328.0, UID.CITY)
+		Cities[26] = new City(0, 0, UID.CITY)
 
 		this.onEnter();
 		this.onLeave();

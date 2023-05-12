@@ -28,11 +28,11 @@ export class CityAllocation {
 					do {
 						city = this.getCityFromPool(cityPool);
 						country = Country.fromCity.get(city);
-					} while (country.citiesOwned.get(gPlayer) >= country.allocLim || counter == 50 || city == null);
+						counter++;
+					} while (country.citiesOwned.get(gPlayer) >= country.allocLim && counter < 50 && city != null);
 
 					if (city == null) print(`Error in CityAllocation, No cities avaiable in pool`)
 					if (counter >= 50) print(`Error in CityAllocation, No valid city found in pool`)
-
 					CityAllocation.changeOwner(city, gPlayer, cityPool);
 				}
 

@@ -1445,3 +1445,9 @@ STRING 7419
 |cff3BA0CBAbilties:|r Attacks cannot be dodged
 }
 
+STRING 7420
+// Abilities: AIbk (Blink (Item Version)), Hotkey (Hotkey - Normal)
+{
+B
+}
+
