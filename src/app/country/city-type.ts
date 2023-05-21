@@ -118,7 +118,6 @@ export class City {
 		Cities[23] = new City(5824.0, -13760.0, UID.CITY)
 		Cities[24] = new City(4032.0, -11328.0, UID.CITY)
 		Cities[25] = new City(4032.0, -11328.0, UID.CITY)
-		Cities[26] = new City(0, 0, UID.CITY)
 
 		this.onEnter();
 		this.onLeave();
