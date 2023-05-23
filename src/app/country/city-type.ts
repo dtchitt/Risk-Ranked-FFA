@@ -146,10 +146,19 @@ export class City {
 		Cities[44] = new City(288.0, -1376.0, UID.PORT)
 		//Bhutan
 		Cities[45] = new City(0.0, 1408.0, UID.CITY)
-
 		//North East India
 		Cities[46] = new City(1088.0, 576.0, UID.CITY)
 		Cities[47] = new City(1984.0, 1920.0, UID.CITY)
+		//Nepal
+		Cities[48] = new City(-2432.0, 1664.0, UID.CITY)
+		Cities[49] = new City(-1344.0, 1088.0, UID.CITY)
+
+		//Tibet
+		Cities[50] = new City(-2496.0, 4416.0, UID.CITY)
+		Cities[51] = new City(-1024.0, 3008.0, UID.CITY)
+		Cities[52] = new City(896.0, 3456.0, UID.CITY)
+		Cities[53] = new City(2688.0, 2944.0, UID.CITY)
+
 
 		this.onEnter();
 		this.onLeave();

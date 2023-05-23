@@ -64,6 +64,8 @@ export class Country {
 		Country.fromName.set("Bangladesh", new Country("Bangladesh", -71.75, -578.0, Cities[43], Cities[44]))
 		Country.fromName.set("Bhutan", new Country("Bhutan", 56.5, 953.5, Cities[45]))
 		Country.fromName.set("Northeast India", new Country("Northeast India", 1342.0, 1212.75, Cities[46], Cities[47]))
+		Country.fromName.set("Nepal", new Country("Nepal", -1994.0, 1087.75, Cities[48], Cities[49]))
+		Country.fromName.set("Tibet", new Country("Tibet", -1600.0, 3902.0, Cities[50], Cities[51], Cities[52], Cities[53]))
 	}
 
 	//Public API
