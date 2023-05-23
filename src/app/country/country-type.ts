@@ -55,6 +55,15 @@ export class Country {
 		Country.fromName.set("East Indonesia", new Country("East Indonesia", 11834.25, -11332.25, Cities[20], Cities[21]))
 		Country.fromName.set("Lower Indonesia", new Country("Lower Indonesia", 7995.0, -15559.0, Cities[22], Cities[23]))
 		Country.fromName.set("West Indonesia", new Country("West Indonesia", 4539.0, -12359.0, Cities[24], Cities[25]))
+		Country.fromName.set("South Vietnam", new Country("South Vietnam", 6976.5, -5567.0, Cities[26], Cities[27]))
+		Country.fromName.set("North Vietnam", new Country("North Vietnam", 5691.5, -824.0, Cities[28], Cities[29]))
+		Country.fromName.set("Laos", new Country("Laos", 4537.5, -1595.75, Cities[30], Cities[31], Cities[32]))
+		Country.fromName.set("Cambodia", new Country("Cambodia", 5823.25, -5836.0, Cities[33], Cities[34]))
+		Country.fromName.set("Thailand", new Country("Thailand", 4924.0, -4677.5, Cities[35], Cities[36], Cities[37]))
+		Country.fromName.set("Myanmar (Burma)", new Country("Myanmar (Burma)", 2359.5, -2615.0, Cities[38], Cities[39], Cities[40], Cities[41], Cities[42]))
+		Country.fromName.set("Bangladesh", new Country("Bangladesh", -71.75, -578.0, Cities[43], Cities[44]))
+		Country.fromName.set("Bhutan", new Country("Bhutan", 56.5, 953.5, Cities[45]))
+		Country.fromName.set("Northeast India", new Country("Northeast India", 1342.0, 1212.75, Cities[46], Cities[47]))
 	}
 
 	//Public API
