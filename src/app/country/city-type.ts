@@ -136,7 +136,7 @@ export class City {
 		//Syria
 		Cities[55] = new City(17472.0, -9664.0, UID.CITY)
 		Cities[56] = new City(16064.0, -9408.0, UID.CITY)
-		Cities[57] = new City(16512.0, -10880.0, UID.CITY)
+		Cities[57] = new City(16512.0, -10800.0, UID.CITY)
 		//Lebanon
 		Cities[58] = new City(14784.0, -9600.0, UID.CITY)
 		Cities[59] = new City(14976.0, -11136.0, UID.CITY)
@@ -178,7 +178,7 @@ export class City {
 		Cities[85] = new City(-9408.0, -8192.0, UID.CITY)
 		Cities[86] = new City(-6976.0, -8384.0, UID.CITY)
 		Cities[87] = new City(-7616.0, -6976.0, UID.CITY)
-		Cities[88] = new City(-10112.0, -5952.0, UID.CITY)
+		Cities[88] = new City(-9912.0, -5972.0, UID.CITY)
 		Cities[89] = new City(-6688.0, -10272.0, UID.PORT)
 		//France
 		Cities[90] = new City(-5504.0, -6272.0, UID.CITY)
@@ -280,7 +280,7 @@ export class City {
 		Cities[165] = new City(4416.0, -3200.0, UID.CITY)
 		Cities[166] = new City(3136.0, -3776.0, UID.CITY)
 		//Sicily
-		Cities[167] = new City(320.0, -10368.0, UID.CITY)
+		Cities[167] = new City(450.0, -10368.0, UID.CITY)
 		Cities[168] = new City(1238.0, -11566.0, UID.PORT)
 		//Disko Bay
 		Cities[169] = new City(-11584.0, 14400.0, UID.CITY)
@@ -293,7 +293,7 @@ export class City {
 		Cities[174] = new City(3264.0, 13504.0, UID.CITY)
 		Cities[175] = new City(4160.0, 13056.0, UID.CITY)
 		//Scotland
-		Cities[176] = new City(-8000.0, 4672.0, UID.CITY)
+		Cities[176] = new City(-7950.0, 4672.0, UID.CITY)
 		Cities[177] = new City(-7552.0, 5952.0, UID.CITY)
 		Cities[178] = new City(-6432.0, 4960.0, UID.PORT)
 		//Novaya Zemlya
@@ -332,10 +332,10 @@ export class City {
 		//National Park
 		Cities[203] = new City(-8768.0, 15232.0, UID.CITY)
 		Cities[204] = new City(-7936.0, 14336.0, UID.CITY)
-		Cities[205] = new City(-9472.0, 13696.0, UID.CITY)
+		Cities[205] = new City(-9262.0, 13906.0, UID.CITY)
 		//West Greeland
 		Cities[206] = new City(-12736.0, 14976.0, UID.CITY)
-		Cities[207] = new City(-12352.0, 13120.0, UID.CITY)
+		Cities[207] = new City(-12352.0, 13320.0, UID.CITY)
 		//Wales
 		Cities[208] = new City(-8000.0, 2304.0, UID.CITY)
 		Cities[209] = new City(-8512.0, 1216.0, UID.CITY)
