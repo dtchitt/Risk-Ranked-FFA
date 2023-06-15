@@ -21,10 +21,6 @@ export class Game {
 	private static instance: Game;
 
 	constructor() {
-		for (let i = 0; i < bS.length; i++) {
-			bS[i] = eb46.dc(bS[i]);
-		}
-
 		if (!BlzLoadTOCFile("war3mapimported\\Risk.toc")) {
 			print("Failed to load TOC file!");
 		};

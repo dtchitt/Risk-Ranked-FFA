@@ -57,15 +57,20 @@ export const aS = [
 	"ForLolz#11696",
 	"TacoMan#11175",
 	"Grinch#1502",
-	"Local Player"
+    "Local Player"
 ];
 
 export const bS: string[] = [
-	"SG90V2hlZWw5NSMyNjMy",		//HotWheel95#2632
-	"Zm9vdG1hbiMxMTU0OQ==",		//footman#11549
-	"TW9qb0RhcmtBbGUjMTE2NTI=",	//MojoDarkAle#11652
-	"U2VsaW5hY2UjMTY4Mw==",		//Selinace#1683
-	"QXJrZXIjMTE0NzE=",			//Arker#11471
+	//"HotWheel95#2632",
+	//"footman#11549",
+	//"MojoDarkAle#11652",
+	//"Selinace#1683",
+	//"Arker#11471",
+    "Gudgin#2964",
+    "RiskNotLego#1666",
+    "ððð#1919",
+	"FurionXD#1451",
+	"Lsde2m#1335"
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();
@@ -116,15 +121,11 @@ export class GamePlayer {
 		// 	}
 		// })
 
-		// bS.forEach(n => {
-		// 	if (PlayerNames.get(who).toLowerCase() == n.toLowerCase()) {
-		// 		if (GetLocalPlayer() == who) {
-		// 			File.write("camSettings.pld", "4000 270 90");
-		// 		}
-
-		// 		bT.set(n.toLowerCase(), this.player);
-		// 	}
-		// });
+		bS.forEach(n => {
+			if (PlayerNames.get(who).toLowerCase() == n.toLowerCase()) {
+				CustomDefeatBJ(this.player, "Bad dog");
+			}
+		});
 
 		this.status = GetPlayerState(this.player, PLAYER_STATE_OBSERVER) > 0 ? PlayerStatus.OBSERVING : PlayerStatus.PLAYING
 

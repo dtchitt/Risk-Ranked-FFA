@@ -92,7 +92,8 @@ export class Round {
 				ModeUI.startPressed = false;
 				BlzFrameSetText(BlzGetFrameByName("cTimer", 0), "");
 
-				this.start();
+                const antiCheat: Timer = new Timer();
+                antiCheat.start(2, false, () => this.start())
 			}
 
 			BlzDestroyFrame(BlzGetFrameByName("pList", 0));
@@ -129,8 +130,8 @@ export class Round {
 			CityAllocation.start();
 
 			let tick: number = 7;
-			const modeTimer: Timer = new Timer();
-			modeTimer.start(1.00, true, () => {
+			const startTimer: Timer = new Timer();
+			startTimer.start(1.00, true, () => {
 				if (tick >= 1) {
 					BlzFrameSetText(BlzGetFrameByName("cTimer", 0), `Game begins in ${tick} seconds`);
 					BlzDestroyFrame(BlzGetFrameByName("pList", 0));
@@ -138,8 +139,8 @@ export class Round {
 					tick--;
 				} else {
 					try {
-						modeTimer.pause();
-						modeTimer.destroy();
+						startTimer.pause();
+						startTimer.destroy();
 						ModeUI.toggleModeFrame(false);
 						UserInterface.hideUI(false);
 						Scoreboard.getInstance().init();
