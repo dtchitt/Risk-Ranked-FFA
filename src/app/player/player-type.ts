@@ -1,15 +1,15 @@
-import { RoundSettings } from "app/game/settings-data";
-import { PLAYER_COLOR_CODES } from "resources/colordata";
-import { NEUTRAL_HOSTILE } from "resources/constants";
-import { UID } from "resources/unitID";
-import { UTYPE } from "resources/unitTypes";
-import { File } from "w3ts";
+import { RoundSettings } from 'app/game/settings-data';
+import { PLAYER_COLOR_CODES } from 'resources/colordata';
+import { NEUTRAL_HOSTILE } from 'resources/constants';
+import { UID } from 'resources/unitID';
+import { UTYPE } from 'resources/unitTypes';
+import { File } from 'w3ts';
 
 interface KD {
 	killValue: number;
 	deathValue: number;
 	kills: number;
-	deaths: number
+	deaths: number;
 }
 
 interface Bounty {
@@ -43,22 +43,17 @@ export const BonusCap: number = 60;
 export const BonusDivisor: number = 200;
 export const PlayerNames: Map<player, string> = new Map<player, string>();
 export const enum PlayerStatus {
-	PLAYING = "|cFF00FFF0Playing|r",
-	OBSERVING = "|cFFFFFFFFObserving|r",
-	ALIVE = "|cFF00FF00Alive|r",
-	NOMAD = "|cFFFE8A0ENmd|r",
-	DEAD = "|cFFFF0005Dead|r",
-	FORFEIT = "|cFFFFFC01Forfeit|r",
-	LEFT = "|cFF65656ALeft|r",
-	STFU = "|cfffe890dSTFU|r",
-};
+	PLAYING = '|cFF00FFF0Playing|r',
+	OBSERVING = '|cFFFFFFFFObserving|r',
+	ALIVE = '|cFF00FF00Alive|r',
+	NOMAD = '|cFFFE8A0ENmd|r',
+	DEAD = '|cFFFF0005Dead|r',
+	FORFEIT = '|cFFFFFC01Forfeit|r',
+	LEFT = '|cFF65656ALeft|r',
+	STFU = '|cfffe890dSTFU|r',
+}
 
-export const aS = [
-	"ForLolz#11696",
-	"TacoMan#11175",
-	"Grinch#1502",
-    "Local Player"
-];
+export const aS = ['ForLolz#11696', 'TacoMan#11175', 'Grinch#1502', 'Local Player'];
 
 export const bS: string[] = [
 	//"HotWheel95#2632",
@@ -66,11 +61,12 @@ export const bS: string[] = [
 	//"MojoDarkAle#11652",
 	//"Selinace#1683",
 	//"Arker#11471",
-    "Gudgin#2964",
-    "RiskNotLego#1666",
-    "ððð#1919",
-	"FurionXD#1451",
-	"Lsde2m#1335"
+	'Gudgin#2964',
+	'RiskNotLego#1666',
+	'ððð#1919',
+	'FurionXD#1451',
+	'Lsde2m#1335',
+	'Jeppe#22909',
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();
@@ -104,16 +100,16 @@ export class GamePlayer {
 		this.goldTotal = 0;
 		this.cityData = {
 			maxCities: 0,
-			endCities: 0
-		}
+			endCities: 0,
+		};
 		this.turnDied = -1;
 
 		this.names = {
-			btag: (who == NEUTRAL_HOSTILE) ? "Neutral-Hostile" : PlayerNames.get(who),
-			acct: "",
-			color: "",
-			colorIndex: 0
-		}
+			btag: who == NEUTRAL_HOSTILE ? 'Neutral-Hostile' : PlayerNames.get(who),
+			acct: '',
+			color: '',
+			colorIndex: 0,
+		};
 
 		// aS.forEach(n => {
 		// 	if (this.names.btag == n) {
@@ -121,13 +117,14 @@ export class GamePlayer {
 		// 	}
 		// })
 
-		bS.forEach(n => {
+		bS.forEach((n) => {
 			if (PlayerNames.get(who).toLowerCase() == n.toLowerCase()) {
-				CustomDefeatBJ(this.player, "Bad dog");
+				CustomDefeatBJ(this.player, 'Bad dog');
 			}
 		});
 
-		this.status = GetPlayerState(this.player, PLAYER_STATE_OBSERVER) > 0 ? PlayerStatus.OBSERVING : PlayerStatus.PLAYING
+		this.status =
+			GetPlayerState(this.player, PLAYER_STATE_OBSERVER) > 0 ? PlayerStatus.OBSERVING : PlayerStatus.PLAYING;
 
 		//SetPlayerState(this.player, PLAYER_STATE_OBSERVER, 0);
 
@@ -153,8 +150,8 @@ export class GamePlayer {
 		this.bonus = {
 			delta: 0,
 			total: 0,
-			bar: null
-		}
+			bar: null,
+		};
 
 		this.fog = CreateFogModifierRect(this.player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false);
 
@@ -174,29 +171,29 @@ export class GamePlayer {
 
 		this.bounty = {
 			delta: 0,
-			total: 0
-		}
+			total: 0,
+		};
 	}
 
 	public initKDMaps() {
-		GamePlayer.fromPlayer.forEach(gPlayer => {
+		GamePlayer.fromPlayer.forEach((gPlayer) => {
 			this.kd.set(gPlayer, {
 				killValue: 0,
 				deathValue: 0,
 				kills: 0,
-				deaths: 0
+				deaths: 0,
 			});
 		});
 
 		for (const key in UID) {
-			const val = UID[key]
+			const val = UID[key];
 
 			this.kd.set(`${val}`, {
 				killValue: 0,
 				deathValue: 0,
 				kills: 0,
-				deaths: 0
-			})
+				deaths: 0,
+			});
 		}
 	}
 
@@ -209,7 +206,10 @@ export class GamePlayer {
 		//this.initKDMaps();
 		this.setName(this.names.acct);
 		BlzFrameSetValue(this.bonus.bar, 0);
-		BlzFrameSetText(BlzGetFrameByName("MyBarExText", GetPlayerId(this.player)), `Fight Bonus: ${this.bonus.delta} / 200`);
+		BlzFrameSetText(
+			BlzGetFrameByName('MyBarExText', GetPlayerId(this.player)),
+			`Fight Bonus: ${this.bonus.delta} / 200`
+		);
 
 		SetPlayerTechMaxAllowed(this.player, UID.BATTLESHIP_SS, -1);
 		SetPlayerTechMaxAllowed(this.player, UID.WARSHIP_A, -1);
@@ -222,16 +222,27 @@ export class GamePlayer {
 	public giveGold(val?: number) {
 		if (!val) val = this.income;
 
-		SetPlayerState(this.player, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(this.player, PLAYER_STATE_RESOURCE_GOLD) + val);
+		SetPlayerState(
+			this.player,
+			PLAYER_STATE_RESOURCE_GOLD,
+			GetPlayerState(this.player, PLAYER_STATE_RESOURCE_GOLD) + val
+		);
 
-		if (val >= 1) this.goldTotal+= val;
+		if (val >= 1) this.goldTotal += val;
 	}
 
 	public initBonusUI() {
-		this.bonus.bar = BlzCreateSimpleFrame("MyBarEx", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), GetPlayerId(this.player));
+		this.bonus.bar = BlzCreateSimpleFrame(
+			'MyBarEx',
+			BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),
+			GetPlayerId(this.player)
+		);
 		BlzFrameSetAbsPoint(this.bonus.bar, FRAMEPOINT_BOTTOMLEFT, 0.63, 0.165);
-		BlzFrameSetTexture(this.bonus.bar, "Replaceabletextures\\Teamcolor\\Teamcolor00.blp", 0, true);
-		BlzFrameSetText(BlzGetFrameByName("MyBarExText", GetPlayerId(this.player)), `Fight Bonus: ${this.bonus.delta} / 200`);
+		BlzFrameSetTexture(this.bonus.bar, 'Replaceabletextures\\Teamcolor\\Teamcolor00.blp', 0, true);
+		BlzFrameSetText(
+			BlzGetFrameByName('MyBarExText', GetPlayerId(this.player)),
+			`Fight Bonus: ${this.bonus.delta} / 200`
+		);
 		BlzFrameSetValue(this.bonus.bar, 0);
 		BlzFrameSetVisible(this.bonus.bar, false);
 
@@ -314,7 +325,7 @@ export class GamePlayer {
 		// 		deaths: 0
 		// 	})
 		// } else {
-		 	//this.kd.get(GamePlayer.getKey(victom, GetUnitTypeId(u))).kills += val; //Total of victom player unit specific
+		//this.kd.get(GamePlayer.getKey(victom, GetUnitTypeId(u))).kills += val; //Total of victom player unit specific
 		// }
 
 		//print(`${GetPlayerName(NEUTRAL_HOSTILE)}|r total kill value ${this.kd.get(this).kills}`)
@@ -330,7 +341,7 @@ export class GamePlayer {
 		// }
 
 		this.evalBounty(val);
-		
+
 		if (RoundSettings.promode) return;
 		this.evalBonus(val);
 	}
@@ -370,15 +381,13 @@ export class GamePlayer {
 	}
 
 	public coloredName(): string {
-		if (this.player == NEUTRAL_HOSTILE) return `${GetPlayerName(this.player)}`
+		if (this.player == NEUTRAL_HOSTILE) return `${GetPlayerName(this.player)}`;
 
 		if (!RoundSettings.promode) {
-			return `${PLAYER_COLOR_CODES[this.names.colorIndex]}${GetPlayerName(this.player)}|r`
+			return `${PLAYER_COLOR_CODES[this.names.colorIndex]}${GetPlayerName(this.player)}|r`;
 		} else {
-			return `${PLAYER_COLOR_CODES[this.names.colorIndex]}${this.names.acct}|r`
+			return `${PLAYER_COLOR_CODES[this.names.colorIndex]}${this.names.acct}|r`;
 		}
-
-
 	}
 
 	public isAlive() {
@@ -402,7 +411,7 @@ export class GamePlayer {
 	}
 
 	public isObserving() {
-		return this.status == PlayerStatus.OBSERVING
+		return this.status == PlayerStatus.OBSERVING;
 	}
 
 	public isPlaying() {
@@ -428,21 +437,25 @@ export class GamePlayer {
 	public getUnitCount(): number {
 		const g: group = CreateGroup();
 
-		GroupEnumUnitsOfPlayer(g, this.player, Filter(() => {
-			if (IsUnitType(GetFilterUnit(), UTYPE.BUILDING)) return false;
-			if (IsUnitType(GetFilterUnit(), UTYPE.TRANSPORT)) return false; //Need to check if loaded, as I don't know if it will count loaded units
-			if (!UnitAlive(GetFilterUnit())) return false;
-			return true; //Unit is not alive, not transport, not building
-		}))
+		GroupEnumUnitsOfPlayer(
+			g,
+			this.player,
+			Filter(() => {
+				if (IsUnitType(GetFilterUnit(), UTYPE.BUILDING)) return false;
+				if (IsUnitType(GetFilterUnit(), UTYPE.TRANSPORT)) return false; //Need to check if loaded, as I don't know if it will count loaded units
+				if (!UnitAlive(GetFilterUnit())) return false;
+				return true; //Unit is not alive, not transport, not building
+			})
+		);
 
-		const result: number = BlzGroupGetSize(g)
+		const result: number = BlzGroupGetSize(g);
 		DestroyGroup(g);
 
 		return result;
 	}
 
 	private evalBounty(val: number) {
-		this.bounty.delta += (val * 0.25) //This is not precise math.
+		this.bounty.delta += val * 0.25; //This is not precise math.
 
 		if (this.bounty.delta >= 1) {
 			let delta: number = Math.floor(this.bounty.delta);
@@ -462,7 +475,7 @@ export class GamePlayer {
 			// let bonusQty: number = Math.floor(this.kd.get(this).kills) / BonusDivisor * BonusMultiplier + BonusBase;
 
 			// To increase bonus by 1 every 200 kills use below with a additive of 9
-			let bonusQty: number = Math.floor(this.kd.get(this).killValue) / BonusDivisor + BonusBase
+			let bonusQty: number = Math.floor(this.kd.get(this).killValue) / BonusDivisor + BonusBase;
 
 			bonusQty = Math.min(bonusQty, BonusCap);
 			this.bonus.total += bonusQty;
@@ -472,11 +485,20 @@ export class GamePlayer {
 				ClearTextMessages();
 			}
 
-			DisplayTimedTextToPlayer(this.player, 0.82, 0.81, 3.00, `Received |cffffcc00${bonusQty}|r gold from |cffff0303Fight Bonus|r!`);
+			DisplayTimedTextToPlayer(
+				this.player,
+				0.82,
+				0.81,
+				3.0,
+				`Received |cffffcc00${bonusQty}|r gold from |cffff0303Fight Bonus|r!`
+			);
 		}
 
-		BlzFrameSetText(BlzGetFrameByName("MyBarExText", GetPlayerId(this.player)), `Fight Bonus: ${this.bonus.delta} / 200`);
-		BlzFrameSetValue(this.bonus.bar, (this.bonus.delta / 2));
+		BlzFrameSetText(
+			BlzGetFrameByName('MyBarExText', GetPlayerId(this.player)),
+			`Fight Bonus: ${this.bonus.delta} / 200`
+		);
+		BlzFrameSetValue(this.bonus.bar, this.bonus.delta / 2);
 	}
 
 	private killPlayer() {
