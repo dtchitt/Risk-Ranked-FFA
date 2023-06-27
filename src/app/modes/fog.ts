@@ -1,5 +1,1 @@
-export const Fog = [
-    "Off",
-    "On",
-    "Night Fog"
-];
+export const Fog = ['Off', 'On', 'Night Fog'];

@@ -1,5 +1,5 @@
 export const GameType = [
-    "Conquest",
-    //"Capitals",
-    //"Russian Brawl"
+	'Conquest',
+	//"Capitals",
+	//"Russian Brawl"
 ];

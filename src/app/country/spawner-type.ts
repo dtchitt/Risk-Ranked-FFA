@@ -1,9 +1,9 @@
-import { GamePlayer } from "app/player/player-type";
-import { AID } from "resources/abilityID";
-import { NEUTRAL_HOSTILE } from "resources/constants";
-import { UID } from "resources/unitID";
-import { UTYPE } from "resources/unitTypes";
-import { Group } from "w3ts";
+import { GamePlayer } from 'app/player/player-type';
+import { AID } from 'resources/abilityID';
+import { NEUTRAL_HOSTILE } from 'resources/constants';
+import { UID } from 'resources/unitID';
+import { UTYPE } from 'resources/unitTypes';
+import { Group } from 'w3ts';
 
 const SpawnTypeID: number = UID.RIFLEMEN;
 const SpawnTurnLimit: number = 5;
@@ -15,7 +15,7 @@ export class Spawner {
 	private spawnAmount: number;
 	private spawnMax: number;
 
-	public static fromUnit:Map<unit, Spawner> = new Map<unit, Spawner>(); //Set in constructor
+	public static fromUnit: Map<unit, Spawner> = new Map<unit, Spawner>(); //Set in constructor
 
 	constructor(country: string, x: number, y: number, countrySize: number) {
 		this.playerSpawns = new Map<GamePlayer, unit[]>();
@@ -46,13 +46,12 @@ export class Spawner {
 
 			if (GetUnitTypeId(fU) == UID.SPAWNER && GetOwningPlayer(fU) == GetOwningPlayer(u)) {
 				if (GetSpellAbilityId() == AID.SPWN_RESET) {
-					IssuePointOrder(fU, "setrally", GetUnitX(fU), GetUnitY(fU));
+					IssuePointOrder(fU, 'setrally', GetUnitX(fU), GetUnitY(fU));
 				} else {
 					if (GetOwningPlayer(fU) == GetLocalPlayer()) {
 						SelectUnit(fU, true);
 					}
 				}
-
 			}
 
 			return false;
@@ -75,11 +74,11 @@ export class Spawner {
 		SetUnitOwner(this.unit, newOwner, true);
 
 		if (!this.playerSpawns.has(GamePlayer.fromPlayer.get(newOwner))) {
-			this.playerSpawns.set(GamePlayer.fromPlayer.get(newOwner), [])
+			this.playerSpawns.set(GamePlayer.fromPlayer.get(newOwner), []);
 		}
 
 		this.setName();
-		IssuePointOrder(this.unit, "setrally", GetUnitX(this.unit), GetUnitY(this.unit));
+		IssuePointOrder(this.unit, 'setrally', GetUnitX(this.unit), GetUnitY(this.unit));
 	}
 
 	/**
@@ -105,7 +104,7 @@ export class Spawner {
 			UnitAddType(u, UTYPE.SPAWN);
 			this.playerSpawns.get(owner).push(u);
 			Spawner.fromUnit.set(u, this);
-			IssuePointOrderLoc(u, "attack", loc);
+			IssuePointOrderLoc(u, 'attack', loc);
 
 			RemoveLocation(loc);
 			loc = null;
@@ -148,12 +147,12 @@ export class Spawner {
 	private setName() {
 		if (GetOwningPlayer(this.unit) == NEUTRAL_HOSTILE) {
 			BlzSetUnitName(this.unit, `${this.country} is unowned`);
-			SetUnitAnimation(this.unit, "death");
+			SetUnitAnimation(this.unit, 'death');
 		} else {
 			const spawnCount: number = this.playerSpawns.get(GamePlayer.fromPlayer.get(GetOwningPlayer(this.unit))).length;
 
 			BlzSetUnitName(this.unit, `${this.country}  ${spawnCount} / ${this.spawnMax}`);
-			SetUnitAnimation(this.unit, "stand");
+			SetUnitAnimation(this.unit, 'stand');
 		}
 	}
 }

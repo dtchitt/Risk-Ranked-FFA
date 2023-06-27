@@ -1,6 +1,6 @@
 export const Diplomancy = [
-    "FFA",
-    "Lobby Teams",
-    //"Random Teams",
-    //"Free Ally"
+	'FFA',
+	'Lobby Teams',
+	//"Random Teams",
+	//"Free Ally"
 ];

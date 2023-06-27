@@ -1,6 +1,7 @@
-import { GamePlayer } from "app/player/player-type";
+import { GamePlayer } from 'app/player/player-type';
 
-export function compareValue(filterUnit: unit, compareUnit: unit): unit { //compareUnit = current guardChoice
+export function compareValue(filterUnit: unit, compareUnit: unit): unit {
+	//compareUnit = current guardChoice
 	if (filterUnit == compareUnit) return compareUnit;
 
 	let wantedUnit: unit = compareUnit;

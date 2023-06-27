@@ -1,11 +1,10 @@
-import { Game } from "app/game/game-type";
-import { addScriptHook, W3TS_HOOK } from "w3ts";
+import { Game } from 'app/game/game-type';
+import { addScriptHook, W3TS_HOOK } from 'w3ts';
 
 function tsMain() {
 	try {
 		Game.getInstance();
-	}
-	catch (e) {
+	} catch (e) {
 		print(e);
 	}
 }
@@ -13,7 +12,7 @@ function tsMain() {
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsMain);
 
 function fixMapName() {
-	SetMapName("Risk Europe");
+	SetMapName('Risk Europe');
 }
 
 addScriptHook(W3TS_HOOK.CONFIG_AFTER, fixMapName);

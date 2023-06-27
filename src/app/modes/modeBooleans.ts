@@ -1,4 +1,1 @@
-export const ModeBooleans = [
-    "No",
-    "Yes"
-];
+export const ModeBooleans = ['No', 'Yes'];

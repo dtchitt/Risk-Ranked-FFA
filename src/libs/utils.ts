@@ -1,13 +1,13 @@
-import { HexColors } from "resources/hexColors";
-import { TextTag, MapPlayer, Trigger } from "w3ts";
-import { Players } from "w3ts/globals";
+import { HexColors } from 'resources/hexColors';
+import { TextTag, MapPlayer, Trigger } from 'w3ts';
+import { Players } from 'w3ts/globals';
 
 export function ErrorMessage(p: player, msg: string) {
 	if (GetLocalPlayer() == p) ClearTextMessages();
 
-	DisplayTimedTextToPlayer(p, 0.52, 0.96, 2.00, `\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n${HexColors.TANGERINE} ${msg}|r`);
+	DisplayTimedTextToPlayer(p, 0.52, 0.96, 2.0, `\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n${HexColors.TANGERINE} ${msg}|r`);
 
-	PlayLocalSound("Sound\\Interface\\Error.flac", p);
+	PlayLocalSound('Sound\\Interface\\Error.flac', p);
 }
 
 export function MessageAll(clear: boolean, msg: string, x?: number, y?: number) {
@@ -15,13 +15,13 @@ export function MessageAll(clear: boolean, msg: string, x?: number, y?: number) 
 	if (!x) x = 0.92;
 	if (!y) y = 0.81;
 
-	Players.forEach(p => {
-		DisplayTimedTextToPlayer(p.handle, x, y, 5.00, msg);
+	Players.forEach((p) => {
+		DisplayTimedTextToPlayer(p.handle, x, y, 5.0, msg);
 	});
 }
 
 export function PlayLocalSound(soundPath: string, p: player) {
-	let sound = CreateSound(soundPath, false, false, true, 10, 10, "")
+	let sound = CreateSound(soundPath, false, false, true, 10, 10, '');
 
 	if (GetLocalPlayer() != p) SetSoundVolume(sound, 0);
 
@@ -31,7 +31,7 @@ export function PlayLocalSound(soundPath: string, p: player) {
 }
 
 export function PlayGlobalSound(soundPath: string) {
-	let sound = CreateSound(soundPath, false, false, true, 10, 10, "")
+	let sound = CreateSound(soundPath, false, false, true, 10, 10, '');
 
 	StartSound(sound);
 	KillSoundWhenDone(sound);
@@ -47,7 +47,7 @@ export function showOverheadText(x: number, y: number, r: number, g: number, b: 
 	t.setLifespan(2);
 	t.setFadepoint(1);
 	t.setVisible(true);
-	t.setVelocity(0, 7.1 / 128 * Sin(3.14159 / 2));;
+	t.setVelocity(0, (7.1 / 128) * Sin(3.14159 / 2));
 	return t;
 }
 
@@ -82,7 +82,7 @@ export function syncData(handle: string, listenFor: MapPlayer, cb: (result: stri
 
 	return (toSend: string) => {
 		BlzSendSyncData(handle, toSend);
-	}
+	};
 }
 
 export function distanceBetweenPoints(x1: number, y1: number, x2: number, y2: number) {
