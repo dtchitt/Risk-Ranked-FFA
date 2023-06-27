@@ -1,10 +1,10 @@
 {
 	"fileName": "Risk_Europe",
-	"version": "1.54",
+	"version": "1.55",
 	"mapFolder": "risk_system.w3x",
-	"minifyScript": true,
-	"gameExecutable": "C:\\Program Files (x86)\\Warcraft III\\_retail_\\x86_64\\Warcraft III.exe",
-	"outputFolder": "C:\\Users\\danie\\Documents\\Warcraft III\\Maps\\Download\\(0) testing",
+	"minifyScript": false,
+	"gameExecutable": "D:\\Blizzard\\Warcraft III\\_retail_\\x86_64\\Warcraft III.exe",
+	"outputFolder": "C:\\Users\\daniel\\Documents\\Warcraft III\\Maps\\Download\\(0) testing",
 	"launchArgs": [
 		"-launch",
 		"-windowmode",

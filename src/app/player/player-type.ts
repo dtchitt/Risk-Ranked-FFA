@@ -3,7 +3,6 @@ import { PLAYER_COLOR_CODES } from 'resources/colordata';
 import { NEUTRAL_HOSTILE } from 'resources/constants';
 import { UID } from 'resources/unitID';
 import { UTYPE } from 'resources/unitTypes';
-import { File } from 'w3ts';
 
 interface KD {
 	killValue: number;
@@ -62,11 +61,9 @@ export const bS: string[] = [
 	//"Selinace#1683",
 	//"Arker#11471",
 	'Gudgin#2964',
-	'RiskNotLego#1666',
 	'ððð#1919',
 	'FurionXD#1451',
 	'Lsde2m#1335',
-	'Jeppe#22909',
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();
