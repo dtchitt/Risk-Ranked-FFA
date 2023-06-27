@@ -9,7 +9,7 @@ import { AllyLimit } from 'app/modes/allyLimit';
 import { Diplomancy } from 'app/modes/diplomancy';
 import { Fog } from 'app/modes/fog';
 import { GoldSending } from 'app/modes/goldSending';
-import { NomadTimeLimit } from 'app/modes/nomadTimeLimit';
+import { OneHourTimeLimit } from 'app/modes/nomadTimeLimit';
 import { ShipsAllowed } from 'app/modes/shipsAllowed';
 import { TransportLanding } from 'app/modes/transports';
 import { Slider } from './slider';
@@ -251,13 +251,13 @@ export class ModeUI {
 			}
 		});
 
-		new Slider('Nomad Time Limit', backdrop, 0.075, -0.23, -0.015, NomadTimeLimit, () => {
-			Settings.getInstance().nomad = BlzFrameGetValue(Slider.fromName('Nomad Time Limit').slider);
+		new Slider('1 Hour Timer', backdrop, 0.075, -0.23, -0.015, OneHourTimeLimit, () => {
+			Settings.getInstance().nomad = BlzFrameGetValue(Slider.fromName('1 Hour Timer').slider);
 
-			if (BlzFrameGetValue(Slider.fromName('Nomad Time Limit').slider) > 0) {
-				BlzFrameSetTextColor(Slider.fromName('Nomad Time Limit').text, BlzConvertColor(255, 255, 0, 0));
+			if (BlzFrameGetValue(Slider.fromName('1 Hour Timer').slider) > 0) {
+				BlzFrameSetTextColor(Slider.fromName('1 Hour Timer').text, BlzConvertColor(255, 255, 0, 0));
 			} else {
-				BlzFrameSetTextColor(Slider.fromName('Nomad Time Limit').text, BlzConvertColor(255, 255, 255, 255));
+				BlzFrameSetTextColor(Slider.fromName('1 Hour Timer').text, BlzConvertColor(255, 255, 255, 255));
 			}
 		});
 

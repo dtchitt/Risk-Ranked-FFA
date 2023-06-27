@@ -77,6 +77,10 @@ export class GameTracking {
 		return this.giveVictory(who);
 	}
 
+	public suddenDeathVictory(): boolean {
+		return this.giveVictory(this._leader);
+	}
+
 	private giveVictory(who?: GamePlayer): boolean {
 		if (!who) return false;
 		if (!this.roundInProgress) return false;

@@ -32,7 +32,7 @@ export function onOwnerChange() {
 			if (country.owner == prevOwner.player) country.setOwner(NEUTRAL_HOSTILE);
 
 			if (prevOwner.cities.length == 0 && prevOwner.player != NEUTRAL_HOSTILE && !prevOwner.isLeft()) {
-				if (prevOwner.getUnitCount() <= 0 || RoundSettings.nomad < 0) {
+				if (prevOwner.getUnitCount() <= 0) {
 					prevOwner.setStatus(PlayerStatus.DEAD);
 					MessageAll(
 						true,
@@ -50,9 +50,9 @@ export function onOwnerChange() {
 					}
 
 					if (GameTracking.getInstance().koVictory()) GameTimer.getInstance().stop();
-				} else if (RoundSettings.nomad > 0) {
+				} else {
 					const nomadTimer: Timer = new Timer();
-					let duration: number = RoundSettings.nomad;
+					let duration: number = 60;
 
 					prevOwner.setStatus(PlayerStatus.NOMAD);
 					nomadTimer.start(1, true, () => {

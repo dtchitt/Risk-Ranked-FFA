@@ -53,7 +53,7 @@ export class TransportManager {
 		const transport: Transport = this.transports.get(unit);
 
 		if (this.isTerrainInvalid(transport.unit)) {
-			transport.cargo.filter((unit) => {
+			transport.cargo = transport.cargo.filter((unit) => {
 				BlzSetUnitMaxHP(unit, 1);
 				UnitDamageTarget(killer, unit, 100, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS);
 
@@ -78,7 +78,6 @@ export class TransportManager {
 		TriggerAddCondition(
 			t,
 			Condition(() => {
-				//if (!RoundSettings.transport) return false;
 				let trans: unit = GetTransportUnit();
 				let loadedUnit: unit = GetLoadedUnit();
 
@@ -98,9 +97,6 @@ export class TransportManager {
 
 			TriggerRegisterUnitEvent(t, transport.unit, EVENT_UNIT_ISSUED_TARGET_ORDER);
 
-			//print(`target x:${GetOrderPointX}, y:${GetOrderPointY}`);
-			//print(`trans x:${GetUnitX(trans)}, y:${GetUnitY(trans)}`);
-
 			TriggerAddCondition(
 				t,
 				Condition(() => {
@@ -111,14 +107,10 @@ export class TransportManager {
 								BlzPauseUnitEx(transport.unit, false);
 								IssueImmediateOrder(transport.unit, 'stop');
 								ErrorMessage(GetOwningPlayer(transport.unit), 'You may only unload on pebble terrain!');
-								print('orderUnload if ' + transport.cargo.length);
 							} else {
 								const index: number = transport.cargo.indexOf(GetOrderTargetUnit());
 
 								transport.cargo.splice(index, 1);
-
-								//print(`there is ${Transports.loadedUnits.get(trans).length} units loaded`)
-								print('orderUnload else ' + transport.cargo.length);
 							}
 						}
 					} catch (error) {
@@ -148,11 +140,9 @@ export class TransportManager {
 						BlzPauseUnitEx(transport.unit, true);
 						BlzPauseUnitEx(transport.unit, false);
 						ErrorMessage(GetOwningPlayer(transport.unit), 'You may only load on pebble terrain!');
-						print('spell effect load' + transport.cargo.length);
 					} else if (GetSpellAbilityId() == AID.UNLOAD) {
 						IssueImmediateOrder(transport.unit, 'stop');
 						ErrorMessage(GetOwningPlayer(transport.unit), 'You may only unload on pebble terrain!');
-						print('spell effect unload' + transport.cargo.length);
 					}
 				}
 
@@ -173,9 +163,6 @@ export class TransportManager {
 			Condition(() => {
 				if (GetSpellAbilityId() == AID.UNLOAD) {
 					transport.cargo = transport.cargo.filter((unit) => IsUnitInTransport(unit, transport.unit));
-
-					print(`there is ${transport.cargo.length} units loaded - endCast`);
-					print(`-----------------------------------`);
 				}
 
 				return false;

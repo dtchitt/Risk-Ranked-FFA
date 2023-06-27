@@ -135,25 +135,10 @@ export class Settings {
 	private nomadSetup() {
 		switch (this.nomad) {
 			case 1:
-				this.nomad = 90;
-				break;
-			case 2:
-				this.nomad = 120;
-				break;
-			case 3:
-				this.nomad = 150;
-				break;
-			case 4:
-				this.nomad = 180;
-				break;
-			case 5:
-				this.nomad = 0; //Unlimited Time
-				break;
-			case 6:
-				this.nomad = -1; //Insta Death
+				this.nomad = 1;
 				break;
 			default:
-				this.nomad = 60;
+				this.nomad = 0;
 				break;
 		}
 

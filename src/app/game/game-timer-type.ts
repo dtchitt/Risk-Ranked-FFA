@@ -7,6 +7,7 @@ import { Timer } from 'w3ts';
 import { GameTracking } from './game-tracking-type';
 import { Alliances } from './round-allies';
 import { RoundSettings } from './settings-data';
+import { Settings } from './round-settings';
 
 export class GameTimer {
 	private static instance: GameTimer;
@@ -130,6 +131,18 @@ export class GameTimer {
 		if (this._turn > 1) {
 			const gameOver: boolean = GameTracking.getInstance().cityVictory();
 			if (gameOver) return this.stop();
+		}
+
+		if (Settings.getInstance().nomad == 1 && this._turn == 61) {
+			MessageAll(true, `${HexColors.RED}The game will end in 15 turnsw, whoever has the most cities wins!|r`);
+		}
+
+		if (Settings.getInstance().nomad == 1 && this._turn == 71) {
+			MessageAll(true, `${HexColors.RED}The game will end in 5 turns, whoever has the most cities wins!|r`);
+		}
+
+		if (Settings.getInstance().nomad == 1 && this._turn == 76) {
+			GameTracking.getInstance().suddenDeathVictory();
 		}
 
 		Country.fromName.forEach((country) => {
