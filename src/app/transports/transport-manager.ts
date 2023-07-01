@@ -82,7 +82,6 @@ export class TransportManager {
 				let loadedUnit: unit = GetLoadedUnit();
 
 				this.transports.get(trans).cargo.push(loadedUnit);
-				print(`there is ${this.transports.get(trans).cargo.length} units loaded - onLoad`);
 
 				trans = null;
 				loadedUnit = null;

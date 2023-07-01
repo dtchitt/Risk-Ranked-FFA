@@ -135,7 +135,7 @@ export class ModeUI {
 			Frame.fromName('Ally Limit slider', 0).setValue(0);
 			Frame.fromName('Diplomancy slider', 0).setValue(1);
 			Frame.fromName('Fog slider', 0).setValue(1);
-			Frame.fromName('Nomad Time Limit slider', 0).setValue(0);
+			Frame.fromName('1 Hour Timer slider', 0).setValue(0);
 			Frame.fromName('Gold Sending slider', 0).setValue(0);
 			Frame.fromName('Ships Allowed slider', 0).setValue(0);
 			Frame.fromName('Transports Load/Unload slider', 0).setValue(0);
@@ -150,7 +150,7 @@ export class ModeUI {
 			Frame.fromName('Ally Limit slider', 0).setValue(0);
 			Frame.fromName('Diplomancy slider', 0).setValue(0);
 			Frame.fromName('Fog slider', 0).setValue(0);
-			Frame.fromName('Nomad Time Limit slider', 0).setValue(0);
+			Frame.fromName('1 Hour Timer slider', 0).setValue(0);
 			Frame.fromName('Gold Sending slider', 0).setValue(0);
 			Frame.fromName('Ships Allowed slider', 0).setValue(0);
 			Frame.fromName('Transports Load/Unload slider', 0).setValue(0);
@@ -251,7 +251,7 @@ export class ModeUI {
 			}
 		});
 
-		new Slider('1 Hour Timer', backdrop, 0.075, -0.23, -0.015, OneHourTimeLimit, () => {
+		new Slider('1 Hour Timer', backdrop, 0.066, -0.23, -0.015, OneHourTimeLimit, () => {
 			Settings.getInstance().nomad = BlzFrameGetValue(Slider.fromName('1 Hour Timer').slider);
 
 			if (BlzFrameGetValue(Slider.fromName('1 Hour Timer').slider) > 0) {
@@ -363,7 +363,7 @@ export class ModeUI {
 		ModeUI.toggleForPlayer(BlzGetFrameByName('Ally Limit slider', 0), Player(0), bool);
 		ModeUI.toggleForPlayer(BlzGetFrameByName('FUnit Control', 0), Player(0), bool);
 		ModeUI.toggleForPlayer(BlzGetFrameByName('Fog slider', 0), Player(0), bool);
-		ModeUI.toggleForPlayer(BlzGetFrameByName('Nomad Time Limit slider', 0), Player(0), bool);
+		ModeUI.toggleForPlayer(BlzGetFrameByName('1 Hour Timer slider', 0), Player(0), bool);
 		ModeUI.toggleForPlayer(BlzGetFrameByName('Gold Sending slider', 0), Player(0), bool);
 		ModeUI.toggleForPlayer(BlzGetFrameByName('Ships Allowed slider', 0), Player(0), bool);
 		ModeUI.toggleForPlayer(BlzGetFrameByName('Transports Load/Unload slider', 0), Player(0), bool);

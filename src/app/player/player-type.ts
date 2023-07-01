@@ -65,6 +65,7 @@ export const bS: string[] = [
 	'FurionXD#1451',
 	'Lsde2m#1335',
 	'destoryer#5167',
+	'Gudgin2#2832',
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();
