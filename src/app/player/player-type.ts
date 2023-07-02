@@ -60,12 +60,15 @@ export const bS: string[] = [
 	//"MojoDarkAle#11652",
 	//"Selinace#1683",
 	//"Arker#11471",
+	//Spammers
 	'Gudgin#2964',
 	'ððð#1919',
 	'FurionXD#1451',
 	'Lsde2m#1335',
 	'destoryer#5167',
 	'Gudgin2#2832',
+	'KateHarry#1131',
+	'Horseback#1652',
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();

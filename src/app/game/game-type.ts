@@ -13,6 +13,7 @@ import { PlayerLeaves } from 'app/player/player-leaves-trigger';
 import { Round } from './round-system';
 import { CommandProcessor } from 'app/commands/command-processor';
 import { TransportManager } from 'app/transports/transport-manager';
+import { AntiSpam } from 'app/commands/anti-spam';
 
 export class Game {
 	private static instance: Game;
@@ -54,6 +55,7 @@ export class Game {
 		//unitTargetOrder();
 		onOwnerChange();
 		PlayerLeaves();
+		AntiSpam();
 		TransportManager.getInstance();
 
 		//Load Game
