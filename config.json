@@ -6,6 +6,8 @@
 	"gameExecutable": "D:\\Games\\Warcraft III\\_retail_\\x86_64\\Warcraft III.exe",
 	"outputFolder": "D:\\OneDrive\\Documents\\Warcraft III\\Maps\\Download",
 	"launchArgs": [
-		"-launch"
+		"-launch",
+		"-windowmode",
+		"windowed"
 	]
 }

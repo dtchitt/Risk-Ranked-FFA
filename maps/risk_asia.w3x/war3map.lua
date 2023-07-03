@@ -9,6 +9,7 @@ local t
 local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("hgyr"), 3685.2, -7344.1, 71.435, FourCC("hgyr"))
+u = BlzCreateUnitWithSkin(p, FourCC("hgyr"), 10109.6, 12913.8, 36.739, FourCC("hgyr"))
 u = BlzCreateUnitWithSkin(p, FourCC("hgyr"), -645.4, 4898.3, 279.479, FourCC("hgyr"))
 end
 
