@@ -1,6 +1,20 @@
 function InitGlobals()
 end
 
+function CreateBuildingsForPlayer0()
+local p = Player(0)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 5184.0, 10688.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 4544.0, 8832.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 3008.0, 8448.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 7488.0, 11584.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h004"), 3769.2, 7989.0, 270.000, FourCC("h004"))
+end
+
 function CreateUnitsForPlayer0()
 local p = Player(0)
 local u
@@ -14,6 +28,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("hgyr"), -645.4, 4898.3, 279.479, FourCC("hg
 end
 
 function CreatePlayerBuildings()
+CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()

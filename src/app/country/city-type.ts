@@ -200,13 +200,20 @@ export class City {
 		//Hulunbuir Steppes (China)
 		Cities[76] = new City(6400.0, 13952.0, UID.CITY)
 		Cities[77] = new City(6080.0, 15744.0, UID.CITY)
-		Cities[77] = new City(7680.0, 14528.0, UID.CITY)
+		Cities[78] = new City(7680.0, 14528.0, UID.CITY)
 
 		//Northeast China
-		Cities[78] = new City(7456.0, 10144.0, UID.PORT)
-		Cities[79] = new City(8640.0, 11776.0, UID.CITY)
-		Cities[80] = new City(9664.0, 13440.0, UID.CITY)
-		Cities[81] = new City(8768.0, 14336.0, UID.CITY)
+		Cities[79] = new City(7456.0, 10144.0, UID.PORT)
+		Cities[80] = new City(8640.0, 11776.0, UID.CITY)
+		Cities[81] = new City(9664.0, 13440.0, UID.CITY)
+		Cities[82] = new City(8768.0, 14336.0, UID.CITY)
+
+		//Inner Mongolia
+		Cities[83] = new City(3008.0, 8448.0, UID.CITY)
+		Cities[84] = new City(4544.0, 8832.0, UID.CITY)
+		Cities[85] = new City(5184.0, 10688.0, UID.CITY)
+		Cities[86] = new City(7488.0, 11584.0, UID.CITY)
+
 
 		this.onEnter();
 		this.onLeave();
