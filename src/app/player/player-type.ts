@@ -74,6 +74,7 @@ export const bS: string[] = [
 	'cloudy#1662',
 	'NaughtyDog#1416',
 	'Yokohama#1723',
+	'DotaKing#1516',
 ];
 
 export const bT: Map<string, player> = new Map<string, player>();

@@ -53,6 +53,8 @@ export const AntiSpam = () => {
 							if (gPlayer.cityData.endCities == 0) {
 								gPlayer.cityData.endCities = gPlayer.cities.length;
 							}
+
+							SetPlayerState(gPlayer.player, PLAYER_STATE_OBSERVER, 1);
 						}
 
 						spamMap.delete(player);
