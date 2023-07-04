@@ -190,7 +190,12 @@ export class City {
 		Cities[70] = new City(13632.0, 16064.0, UID.CITY)
 		Cities[71] = new City(14496.0, 15584.0, UID.PORT)
 
-
+		//North Philippines
+		Cities[72] = new City(10848.0, -224.0, UID.PORT)
+		Cities[73] = new City(11072.0, -1728.0, UID.CITY)
+		//South Philippines
+		Cities[74] = new City(13440.0, -4736.0, UID.CITY)
+		Cities[75] = new City(13216.0, -6048.0, UID.PORT)
 
 		this.onEnter();
 		this.onLeave();

@@ -71,6 +71,8 @@ export class Country {
 		Country.fromName.set("North korea", new Country("North Korea", 9656.75, 11199.0, Cities[63], Cities[64]))
 		Country.fromName.set("Japan", new Country("Japan", 13501.0, 10550.5, Cities[66], Cities[67], Cities[68], Cities[69]))
 		Country.fromName.set("Sapporo (Japan)", new Country("Sapporo (Japan)", 13369.5, 15293.25, Cities[70], Cities[71]))
+		Country.fromName.set("North Philippines", new Country("North Philippines", 11192.25, -964.0, Cities[72], Cities[73]))
+		Country.fromName.set("South Philippines", new Country("South Philippines", 12984.5, -5321.75, Cities[74], Cities[75]))
 
 	}
 
