@@ -73,7 +73,8 @@ export class Country {
 		Country.fromName.set("Sapporo (Japan)", new Country("Sapporo (Japan)", 13369.5, 15293.25, Cities[70], Cities[71]))
 		Country.fromName.set("North Philippines", new Country("North Philippines", 11192.25, -964.0, Cities[72], Cities[73]))
 		Country.fromName.set("South Philippines", new Country("South Philippines", 12984.5, -5321.75, Cities[74], Cities[75]))
-
+		Country.fromName.set("Hulunbuir Steppes (China)", new Country("Hulunbuir Steppes (China)", 7228.5, 13756.0))
+		Country.fromName.set("Northeast China", new Country("Northeast China", 8760.75, 12855.75))
 	}
 
 	//Public API

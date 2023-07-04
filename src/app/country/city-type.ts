@@ -197,6 +197,17 @@ export class City {
 		Cities[74] = new City(13440.0, -4736.0, UID.CITY)
 		Cities[75] = new City(13216.0, -6048.0, UID.PORT)
 
+		//Hulunbuir Steppes (China)
+		Cities[76] = new City(6400.0, 13952.0, UID.CITY)
+		Cities[77] = new City(6080.0, 15744.0, UID.CITY)
+		Cities[77] = new City(7680.0, 14528.0, UID.CITY)
+
+		//Northeast China
+		Cities[78] = new City(7456.0, 10144.0, UID.PORT)
+		Cities[79] = new City(8640.0, 11776.0, UID.CITY)
+		Cities[80] = new City(9664.0, 13440.0, UID.CITY)
+		Cities[81] = new City(8768.0, 14336.0, UID.CITY)
+
 		this.onEnter();
 		this.onLeave();
 		this.onTrain();
