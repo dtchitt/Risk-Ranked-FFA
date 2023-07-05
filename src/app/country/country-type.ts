@@ -76,6 +76,8 @@ export class Country {
 		Country.fromName.set("Hulunbuir Steppes (China)", new Country("Hulunbuir Steppes (China)", 7228.5, 13756.0, Cities[76], Cities[77], Cities[78]))
 		Country.fromName.set("Northeast China", new Country("Northeast China", 8760.75, 12855.75, Cities[79], Cities[80], Cities[81], Cities[82]))
 		Country.fromName.set("Inner Mongolia (China)", new Country("Inner Mongolia (China)", 3769.0, 7989.0, Cities[83], Cities[84], Cities[85], Cities[86]))
+		Country.fromName.set("Mongolia", new Country("Mongolia", 3641.25, 12089.0, Cities[87], Cities[88], Cities[89], Cities[90]))
+		Country.fromName.set("Central Russia", new Country("Central Russia", 2877.75, 15294.25, Cities[91], Cities[92], Cities[93]))
 	}
 
 	//Public API

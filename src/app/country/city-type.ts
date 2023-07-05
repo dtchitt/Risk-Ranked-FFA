@@ -214,6 +214,17 @@ export class City {
 		Cities[85] = new City(5184.0, 10688.0, UID.CITY)
 		Cities[86] = new City(7488.0, 11584.0, UID.CITY)
 
+		//Mongolia
+		Cities[87] = new City(576.0, 12096.0, UID.CITY)
+		Cities[88] = new City(1664.0, 10496.0, UID.CITY)
+		Cities[89] = new City(5312.0, 12352.0, UID.CITY)
+		Cities[90] = new City(1792.0, 13888.0, UID.CITY)
+
+		//Central Russia
+		Cities[91] = new City(-448.0, 14336.0, UID.CITY)
+		Cities[92] = new City(1408.0, 15936.0, UID.CITY)
+		Cities[93] = new City(4288.0, 15424.0, UID.CITY)
+
 
 		this.onEnter();
 		this.onLeave();
