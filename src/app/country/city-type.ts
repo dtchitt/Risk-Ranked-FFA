@@ -225,6 +225,15 @@ export class City {
 		Cities[92] = new City(1408.0, 15936.0, UID.CITY)
 		Cities[93] = new City(4288.0, 15424.0, UID.CITY)
 
+		//South India
+		Cities[94] = new City(-5280.0, -4960.0, UID.PORT)
+		Cities[95] = new City(-2912.0, -4704.0, UID.PORT)
+		Cities[96] = new City(-4032.0, -7680.0, UID.CITY)
+
+		//Sri Lanka
+		Cities[97] = new City(-3200.0, -9728.0, UID.CITY)
+		Cities[98] = new City(-2112.0, -10688.0, UID.CITY)
+
 
 		this.onEnter();
 		this.onLeave();
