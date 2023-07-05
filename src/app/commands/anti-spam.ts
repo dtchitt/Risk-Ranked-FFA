@@ -23,7 +23,11 @@ export const AntiSpam = () => {
 			const player: player = GetTriggerPlayer();
 
 			if (spamMap.has(player)) {
-				if (GetEventPlayerChatString().includes(spamMap.get(player).string)) {
+				if (
+					GetEventPlayerChatString().includes(spamMap.get(player).string) &&
+					GetEventPlayerChatString().length >= 21 &&
+					spamMap.get(player).string.length >= 21
+				) {
 					spamMap.get(player).count++;
 				}
 			} else {
