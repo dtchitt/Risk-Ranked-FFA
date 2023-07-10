@@ -84,7 +84,7 @@ export class Country {
 		Country.fromName.set("West India", new Country("West India", -5953.0, 57.75, Cities[103], Cities[104], Cities[105]))
 		Country.fromName.set("North India", new Country("North India", -4166.0, 3136.75, Cities[106], Cities[107], Cities[108]))
 		Country.fromName.set("East China", new Country("East China", 6449.5, 3382.25, Cities[109], Cities[110], Cities[111], Cities[112], Cities[113], Cities[114], Cities[115], Cities[116]))
-		Country.fromName.set("Central China", new Country("Central China", 2151.0, 5628.25, Cities[117], Cities[118], Cities[119], Cities[120]))
+		Country.fromName.set("Central China", new Country("Central China", 2104.25, 5563.0, Cities[117], Cities[118], Cities[119], Cities[120]))
 		Country.fromName.set("Pakistan", new Country("Pakistan", -6990.0, 1980.25, Cities[121], Cities[122], Cities[123], Cities[124], Cities[125]))
 		Country.fromName.set("Iran", new Country("Iran", -11459.25, 4539.25, Cities[126], Cities[127], Cities[128], Cities[129], Cities[130]))
 		Country.fromName.set("Azerbaijan", new Country("Azerbaijan", -12360.25, 8247.75, Cities[131], Cities[132]))
@@ -96,6 +96,14 @@ export class Country {
 		Country.fromName.set("Saudi Arabia", new Country("Saudi Arabia", -12746.25, -838.0, Cities[141], Cities[142], Cities[143]))
 		Country.fromName.set("UAE", new Country("UAE", -12231.0, 184.75, Cities[144], Cities[145]))
 		Country.fromName.set("Afghanistan", new Country("Afghanistan", -7880.5, 4540.25, Cities[146], Cities[147], Cities[148], Cities[149]))
+		Country.fromName.set("Turkmenistan", new Country("Turkmenistan", -9413.0, 7862.0, Cities[150], Cities[151]))
+		Country.fromName.set("Tajikistan", new Country("Tajikistan", -5824.25, 6967.5, Cities[14], Cities[15]))
+		Country.fromName.set("Kazakhstan", new Country("Kazakhstan", -5179.5, 12858.25, Cities[16], Cities[17], Cities[155], Cities[156], Cities[157], Cities[158]))
+		Country.fromName.set("Kyrgyzstan", new Country("Kyrgyzstan", -4428.25, 7999.5, Cities[159], Cities[160]))
+		Country.fromName.set("Mangystau (Kazakhstan)", new Country("Mangystau (Kazakhstan)", -10179.5, 10297.75, Cities[161], Cities[162]))
+		Country.fromName.set("West Kazakhstan", new Country("West Kazakhstan", -10053.5, 12856.75, Cities[163], Cities[164], Cities[165], Cities[166]))
+		Country.fromName.set("Uzbekistan", new Country("Uzbekistan", -7889.0, 8761.0, Cities[152], Cities[153], Cities[154]))
+
 	}
 
 	//Public API

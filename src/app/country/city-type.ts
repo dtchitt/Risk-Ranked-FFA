@@ -316,6 +316,41 @@ export class City {
 		Cities[148] = new City(-8832.0, 4736.0, UID.CITY)
 		Cities[149] = new City(-6592.0, 5568.0, UID.CITY)
 
+		//Turkmenistan
+		Cities[150] = new City(-8576.0, 6528.0, UID.CITY)
+		Cities[151] = new City(-9792.0, 8576.0, UID.CITY)
+
+		//Uzbekistan
+		Cities[152] = new City(-7616.0, 7488.0, UID.CITY)
+		Cities[153] = new City(-7040.0, 8832.0, UID.CITY)
+		Cities[154] = new City(-8256.0, 9792.0, UID.CITY)
+
+		//Tajikistan
+		Cities[14] = new City(-6528.0, 6976.0, UID.CITY)
+		Cities[15] = new City(-5120.0, 6976.0, UID.CITY)
+
+		//Kazakhstan
+		Cities[16] = new City(-5888.0, 9920.0, UID.CITY)
+		Cities[17] = new City(-3520.0, 10240.0, UID.CITY)
+		Cities[155] = new City(-5248.0, 11712.0, UID.CITY)
+		Cities[156] = new City(-2624.0, 12544.0, UID.CITY)
+		Cities[157] = new City(-5248.0, 14208.0, UID.CITY)
+		Cities[158] = new City(-7040.0, 13376.0, UID.CITY)
+
+		//Kryg
+		Cities[159] = new City(-5056.0, 8768.0, UID.CITY)
+		Cities[160] = new City(-3264.0, 8896.0, UID.CITY)
+
+		//Mangystau (Kazakhstan)
+		Cities[161] = new City(-10624.0, 9792.0, UID.CITY)
+		Cities[162] = new City(-10752.0, 10880.0, UID.CITY)
+
+		//West Kazakhstan
+		Cities[163] = new City(-9792.0, 11904.0, UID.CITY)
+		Cities[164] = new City(-8320.0, 12160.0, UID.CITY)
+		Cities[165] = new City(-9216.0, 13312.0, UID.CITY)
+		Cities[166] = new City(-10944.0, 13376.0, UID.CITY)
+
 
 		this.onEnter();
 		this.onLeave();
