@@ -29,9 +29,9 @@ export class Game {
 			print("Failed to load TOC file!");
 		};
 
-		if (!BlzChangeMinimapTerrainTex("minimap.blp")) {
-			print("Failed to load minimap file!");
-		};
+		// if (!BlzChangeMinimapTerrainTex("minimap.blp")) {
+		// 	print("Failed to load minimap file!");
+		// };
 
 		SetGameSpeed(MAP_SPEED_FASTEST);
 		SetMapFlag(MAP_LOCK_SPEED, true);
