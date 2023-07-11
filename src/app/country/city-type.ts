@@ -55,17 +55,17 @@ export class City {
 		let trigg = CreateTrigger()
 		TriggerRegisterPlayerSelectionEventBJ(trigg, Player(0), true)
 
-		TriggerAddAction(trigg, () => {
-			if (IsUnitType(GetTriggerUnit(), UTYPE.CITY)) {
-				this.counter = this.counter + 1;
-				File.write("city" + this.counter.toString() + ".pld", "Cities[0] = new City(" + GetUnitX(GetTriggerUnit()).toString() + ", " + GetUnitY(GetTriggerUnit()).toString() + ", UID.CITY)");
-			}
-			if (IsUnitType(GetTriggerUnit(), UTYPE.SPAWN)) {
-				this.counter2 = this.counter2 + 1;
-				File.write("country" + this.counter2.toString() + ".pld", "Country.fromName.set(, new Country(, " + GetUnitX(GetTriggerUnit()).toString() + ", " + GetUnitY(GetTriggerUnit()).toString() + "))");
-			}
+		// TriggerAddAction(trigg, () => {
+		// 	if (IsUnitType(GetTriggerUnit(), UTYPE.CITY)) {
+		// 		this.counter = this.counter + 1;
+		// 		File.write("city" + this.counter.toString() + ".pld", "Cities[0] = new City(" + GetUnitX(GetTriggerUnit()).toString() + ", " + GetUnitY(GetTriggerUnit()).toString() + ", UID.CITY)");
+		// 	}
+		// 	if (IsUnitType(GetTriggerUnit(), UTYPE.SPAWN)) {
+		// 		this.counter2 = this.counter2 + 1;
+		// 		File.write("country" + this.counter2.toString() + ".pld", "Country.fromName.set(, new Country(, " + GetUnitX(GetTriggerUnit()).toString() + ", " + GetUnitY(GetTriggerUnit()).toString() + "))");
+		// 	}
 
-		})
+		// })
 
 		//Create cop
 		this.cop = CreateUnit(NEUTRAL_HOSTILE, UID.CONTROL_POINT, offSetX, offSetY, 270);
@@ -96,11 +96,11 @@ export class City {
 		Cities[10] = new City(12544.0, -11456.0, UID.CITY)
 
 		//East Malaysia
-		Cities[11] = new City(7872.0, -11264.0, UID.CITY)
+		Cities[11] = new City(8128.0, -10752.0, UID.CITY)
 		Cities[12] = new City(10112.0, -8064.0, UID.CITY)
 
 		//Brunei
-		Cities[13] = new City(8288.0, -10080.0, UID.PORT)
+		Cities[13] = new City(8736.0, -9120.0, UID.PORT)
 
 		//Lower Indonesia
 		Cities[18] = new City(7104.0, -15040.0, UID.CITY)
@@ -221,7 +221,7 @@ export class City {
 		Cities[90] = new City(1792.0, 13888.0, UID.CITY)
 
 		//Central Russia
-		Cities[91] = new City(-448.0, 14336.0, UID.CITY)
+		Cities[91] = new City(-192.0, 15104.0, UID.CITY)
 		Cities[92] = new City(1408.0, 15936.0, UID.CITY)
 		Cities[93] = new City(4288.0, 15424.0, UID.CITY)
 
@@ -291,8 +291,9 @@ export class City {
 		Cities[134] = new City(-13504.0, 9600.0, UID.CITY)
 
 		//South Russia
-		Cities[135] = new City(-13440.0, 10880.0, UID.CITY)
-		Cities[136] = new City(-12160.0, 11648.0, UID.CITY)
+		Cities[135] = new City(-13056.0, 10816.0, UID.CITY)
+		Cities[136] = new City(-11840.0, 12032.0, UID.CITY)
+		Cities[167] = new City(-13120.0, 12800.0, UID.CITY)
 
 		//Yemen
 		Cities[137] = new City(-13440.0, -3136.0, UID.CITY)

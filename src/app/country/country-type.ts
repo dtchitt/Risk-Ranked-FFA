@@ -48,7 +48,7 @@ export class Country {
 		Country.fromName.set("Taiwan", new Country("Taiwan", 10306.25, 1852.5, Cities[5], Cities[6]))
 		Country.fromName.set("Central Indonesia", new Country("East Indonesia", 9530.0, -10949.75, Cities[7], Cities[8], Cities[9], Cities[10]))
 		Country.fromName.set("East Malaysia", new Country("East Malaysia", 9532.5, -8644.5, Cities[11], Cities[12]))
-		Country.fromName.set("Brunei", new Country("Brunei", 8632.5, -9285.0, Cities[13]))
+		Country.fromName.set("Brunei", new Country("Brunei", 8633.0, -9796.0, Cities[13]))
 		Country.fromName.set("Lower Indonesia", new Country("Lower Indonesia", 7995.0, -15559.0, Cities[18], Cities[19]))
 		Country.fromName.set("West Indonesia", new Country("West Indonesia", 4539.0, -12359.0, Cities[20], Cities[21], Cities[22]))
 		Country.fromName.set("South Vietnam", new Country("South Vietnam", 6976.5, -5567.0, Cities[23], Cities[24]))
@@ -90,7 +90,6 @@ export class Country {
 		Country.fromName.set("Azerbaijan", new Country("Azerbaijan", -12360.25, 8247.75, Cities[131], Cities[132]))
 		Country.fromName.set("Armenia", new Country("Armenia", -13511.25, 8640.5, Cities[133]))
 		Country.fromName.set("Georgia", new Country("Georgia", -13131.0, 9282.0, Cities[134]))
-		Country.fromName.set("South Russia", new Country("South Russia", -12611.5, 10429.5, Cities[135], Cities[136]))
 		Country.fromName.set("Yemen", new Country("Yemen", -13382.75, -2500.0, Cities[137], Cities[138]))
 		Country.fromName.set("Oman", new Country("Oman", -10949.0, -1476.0, Cities[139], Cities[140]))
 		Country.fromName.set("Saudi Arabia", new Country("Saudi Arabia", -12746.25, -838.0, Cities[141], Cities[142], Cities[143]))
@@ -103,6 +102,7 @@ export class Country {
 		Country.fromName.set("Mangystau (Kazakhstan)", new Country("Mangystau (Kazakhstan)", -10179.5, 10297.75, Cities[161], Cities[162]))
 		Country.fromName.set("West Kazakhstan", new Country("West Kazakhstan", -10053.5, 12856.75, Cities[163], Cities[164], Cities[165], Cities[166]))
 		Country.fromName.set("Uzbekistan", new Country("Uzbekistan", -7889.0, 8761.0, Cities[152], Cities[153], Cities[154]))
+		Country.fromName.set("South Russia", new Country("South Russia", -12742.25, 11830.0, Cities[135], Cities[136], Cities[167]))
 
 	}
 
