@@ -1,4 +1,4 @@
-import { File } from "w3ts";
+import { File } from 'w3ts';
 
 interface CamData {
 	distance: number;
@@ -7,17 +7,17 @@ interface CamData {
 }
 
 export enum CamSettings {
-	MIN_DISTANCE = 1000.00,
-	MAX_DISTANCE = 8500.00,
-	DEFAULT_DISTANCE = 4000.00,
+	MIN_DISTANCE = 1000.0,
+	MAX_DISTANCE = 8500.0,
+	DEFAULT_DISTANCE = 4000.0,
 
-	MIN_ANGLE = 270.00,
-	MAX_ANGLE = 350.00,
-	DEFAULT_ANGLE = 290.00,
+	MIN_ANGLE = 270.0,
+	MAX_ANGLE = 350.0,
+	DEFAULT_ANGLE = 290.0,
 
-	MIN_ROTATION = 0.00,
-	MAX_ROTATION = 360.00,
-	DEFAULT_ROTATION = 90.00,
+	MIN_ROTATION = 0.0,
+	MAX_ROTATION = 360.0,
+	DEFAULT_ROTATION = 90.0,
 }
 
 export const PlayerCamData: Map<player, CamData> = new Map<player, CamData>();
@@ -32,11 +32,14 @@ export default class CameraControls {
 			let sAngle: number;
 			let sRot: number;
 
-			if (GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING && GetPlayerController(Player(i)) == MAP_CONTROL_USER) {
+			if (
+				GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING &&
+				GetPlayerController(Player(i)) == MAP_CONTROL_USER
+			) {
 				let contents: string;
 
 				if (Player(i) == GetLocalPlayer()) {
-					contents = File.read("camSettings.pld");
+					contents = File.read('camSettings.pld');
 				}
 
 				if (contents) {
@@ -49,11 +52,11 @@ export default class CameraControls {
 			data = {
 				distance: !sDist ? CamSettings.DEFAULT_DISTANCE : sDist,
 				angle: !sAngle ? CamSettings.DEFAULT_ANGLE : sAngle,
-				rotation: !sRot ? CamSettings.DEFAULT_ROTATION : sRot
-			}
+				rotation: !sRot ? CamSettings.DEFAULT_ROTATION : sRot,
+			};
 
 			PlayerCamData.set(Player(i), data);
-			data = null
+			data = null;
 		}
 
 		this.camReset();
@@ -77,7 +80,7 @@ export default class CameraControls {
 
 		TimerStart(resetTimer, 0.5, true, () => {
 			for (let i = 0; i < bj_MAX_PLAYER_SLOTS; i++) {
-				this.setCameraFields(Player(i), PlayerCamData.get(Player(i)))
+				this.setCameraFields(Player(i), PlayerCamData.get(Player(i)));
 			}
 		});
 	}
@@ -86,27 +89,27 @@ export default class CameraControls {
 		if (val > CamSettings.MAX_DISTANCE) val = CamSettings.MAX_DISTANCE;
 		if (val < CamSettings.MIN_DISTANCE) val = CamSettings.MIN_DISTANCE;
 
-		return data.distance = val;
+		return (data.distance = val);
 	}
 
 	private checkAngle(data: CamData, val: number) {
 		if (val > CamSettings.MAX_ANGLE) val = CamSettings.MAX_ANGLE;
 		if (val < CamSettings.MIN_ANGLE) val = CamSettings.MIN_ANGLE;
 
-		return data.angle = val;
+		return (data.angle = val);
 	}
 
 	private checkRotation(data: CamData, val: number) {
 		if (val > CamSettings.MAX_ROTATION) val = CamSettings.MAX_ROTATION;
 		if (val < CamSettings.MIN_ROTATION) val = CamSettings.MIN_ROTATION;
 
-		return data.rotation = val;
+		return (data.rotation = val);
 	}
 
 	private setCameraFields(p: player, data: CamData) {
-		SetCameraFieldForPlayer(p, CAMERA_FIELD_TARGET_DISTANCE, data.distance, 0.00)
-		SetCameraFieldForPlayer(p, CAMERA_FIELD_ANGLE_OF_ATTACK, data.angle, 0.00)
-		SetCameraFieldForPlayer(p, CAMERA_FIELD_ROTATION, data.rotation, 0.00)
-		SetCameraFieldForPlayer(p, CAMERA_FIELD_FARZ, 10000, 0.00)
+		SetCameraFieldForPlayer(p, CAMERA_FIELD_TARGET_DISTANCE, data.distance, 0.0);
+		SetCameraFieldForPlayer(p, CAMERA_FIELD_ANGLE_OF_ATTACK, data.angle, 0.0);
+		SetCameraFieldForPlayer(p, CAMERA_FIELD_ROTATION, data.rotation, 0.0);
+		SetCameraFieldForPlayer(p, CAMERA_FIELD_FARZ, 10000, 0.0);
 	}
 }

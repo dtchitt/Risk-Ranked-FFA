@@ -7,13 +7,16 @@ import { Country } from "./country-type";
 import { MessageAll } from "libs/utils";
 
 export class CityAllocation {
-	constructor() { }
+	constructor() {}
 
 	public static start() {
 		try {
 			let playerPool: player[] = this.buildPlayerPool();
 			let cityPool: City[] = this.buildCityPool();
-			let citiesMax: number = (RoundSettings.promode == true) ? Math.min(Math.floor(cityPool.length / playerPool.length), 18) : Math.min(Math.floor(cityPool.length / playerPool.length), 20);
+			let citiesMax: number =
+				RoundSettings.promode == true
+					? Math.min(Math.floor(cityPool.length / playerPool.length), 18)
+					: Math.min(Math.floor(cityPool.length / playerPool.length), 20);
 
 			while (playerPool.length > 0) {
 				let gPlayer: GamePlayer = GamePlayer.fromPlayer.get(playerPool.shift());
@@ -22,7 +25,6 @@ export class CityAllocation {
 
 				if (country.citiesOwned.get(gPlayer) < country.allocLim) {
 					CityAllocation.changeOwner(city, gPlayer, cityPool);
-
 				} else {
 					let counter: number = 0;
 					do {
@@ -37,7 +39,7 @@ export class CityAllocation {
 				}
 
 				if (gPlayer.cities.length < citiesMax) {
-					playerPool.push(gPlayer.player)
+					playerPool.push(gPlayer.player);
 				}
 			}
 
@@ -45,11 +47,9 @@ export class CityAllocation {
 			playerPool = null;
 			cityPool.length = 0;
 			cityPool = null;
-
 		} catch (error) {
-			print(error)
+			print(error);
 		}
-
 	}
 
 	private static buildCityPool(): City[] {
@@ -59,9 +59,9 @@ export class CityAllocation {
 			v.initCitiesOwned();
 
 			if (v.cities.length > 1) {
-				v.cities.forEach(city => {
+				v.cities.forEach((city) => {
 					result.push(city);
-				})
+				});
 			}
 		}
 
@@ -73,15 +73,15 @@ export class CityAllocation {
 	private static buildPlayerPool(): player[] {
 		let result: player[] = [];
 
-		GamePlayer.fromPlayer.forEach(gPlayer => {
+		GamePlayer.fromPlayer.forEach((gPlayer) => {
 			if (GetPlayerId(gPlayer.player) >= 24) return;
 
 			if (gPlayer.isAlive()) {
 				result.push(gPlayer.player);
 			}
-		})
+		});
 
-		return result
+		return result;
 	}
 
 	private static getCityFromPool(cityPool: City[]): City | null {

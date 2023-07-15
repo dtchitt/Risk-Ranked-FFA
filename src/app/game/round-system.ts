@@ -206,9 +206,10 @@ export class Round {
 		});
 	}
 
-	public end() { }
+	public end() {}
 
-	public saveRound() { }
+	public saveRound() {}
+
 
 	public static getInstance() {
 		if (this.instance == null) {

@@ -1,8 +1,8 @@
 export const MODES = {
-	UNRANKED: "Unranked",
-	FFA: "FFA",
-	TEAMSOF2: "Teams of 2"
-}
+	UNRANKED: 'Unranked',
+	FFA: 'FFA',
+	TEAMSOF2: 'Teams of 2',
+};
 
 interface RoundSettings {
 	gameType: number;
@@ -33,5 +33,5 @@ export const RoundSettings: RoundSettings = {
 	promode: false,
 	tournament: false,
 	standard: true,
-	mode: MODES.FFA
-}
+	mode: MODES.FFA,
+};

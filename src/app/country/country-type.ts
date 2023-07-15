@@ -1,9 +1,9 @@
-import { GamePlayer } from "app/player/player-type";
-import { PlayLocalSound } from "libs/utils";
-import { HexColors } from "resources/hexColors";
-import { NEUTRAL_HOSTILE } from "resources/constants";
-import { Cities, City } from "./city-type";
-import { Spawner } from "./spawner-type";
+import { GamePlayer } from 'app/player/player-type';
+import { PlayLocalSound } from 'libs/utils';
+import { HexColors } from 'resources/hexColors';
+import { NEUTRAL_HOSTILE } from 'resources/constants';
+import { Cities, City } from './city-type';
+import { Spawner } from './spawner-type';
 
 export class Country {
 	public name: string;
@@ -20,7 +20,7 @@ export class Country {
 	constructor(name: string, x: number, y: number, ...cities: City[]) {
 		this.name = name;
 
-		cities.forEach(city => {
+		cities.forEach((city) => {
 			this.cities.push(city);
 			Country.fromCity.set(city, this);
 		});
@@ -33,7 +33,7 @@ export class Country {
 
 		this.text = CreateTextTag();
 		SetTextTagText(this.text, `${HexColors.TANGERINE} ${this.name}`, 0.028);
-		SetTextTagPos(this.text, offsetX - lengthCheck, offsetY, 16.00);
+		SetTextTagPos(this.text, offsetX - lengthCheck, offsetY, 16.0);
 		SetTextTagVisibility(this.text, true);
 		SetTextTagPermanent(this.text, true);
 
@@ -44,6 +44,7 @@ export class Country {
 
 	//Static API
 	public static init() {
+
 		Country.fromName.set("Papua", new Country("Papua", 17340.0, -9419.25, Cities[1], Cities[2], Cities[3], Cities[4]))
 		Country.fromName.set("Taiwan", new Country("Taiwan", 10306.25, 1852.5, Cities[5], Cities[6]))
 		Country.fromName.set("Central Indonesia", new Country("East Indonesia", 9530.0, -10949.75, Cities[7], Cities[8], Cities[9], Cities[10]))
@@ -122,15 +123,19 @@ export class Country {
 	public animate() {
 		if (this.owner == NEUTRAL_HOSTILE) return;
 
-		this.cities.forEach(city => {
-			const effect = AddSpecialEffect("Abilities\\Spells\\Human\\Resurrect\\ResurrectCaster.mdl", GetUnitX(city.barrack), GetUnitY(city.barrack));
-			BlzSetSpecialEffectScale(effect, 1.10);
+		this.cities.forEach((city) => {
+			const effect = AddSpecialEffect(
+				'Abilities\\Spells\\Human\\Resurrect\\ResurrectCaster.mdl',
+				GetUnitX(city.barrack),
+				GetUnitY(city.barrack)
+			);
+			BlzSetSpecialEffectScale(effect, 1.1);
 			DestroyEffect(effect);
 		});
 	}
 
 	public initCitiesOwned() {
-		GamePlayer.fromPlayer.forEach(gPlayer => {
+		GamePlayer.fromPlayer.forEach((gPlayer) => {
 			if (GetPlayerId(gPlayer.player) >= 25) return;
 
 			this.citiesOwned.set(gPlayer, 0);
@@ -138,7 +143,7 @@ export class Country {
 	}
 
 	public isOwned(): boolean {
-		return this.owner == NEUTRAL_HOSTILE ? false : true
+		return this.owner == NEUTRAL_HOSTILE ? false : true;
 	}
 
 	public step() {
@@ -155,9 +160,11 @@ export class Country {
 		this.spawner.setOwner(who);
 
 		this.animate();
-		DisplayTimedTextToPlayer(who, 0.82, 0.81, 3.00, `${HexColors.TANGERINE}${this.name}|r has been conquered!`);
 
-		PlayLocalSound("Sound\\Interface\\Rescue.flac", who);
+		DisplayTimedTextToPlayer(who, 0.82, 0.81, 3.0, `${HexColors.TANGERINE}${this.name}|r has been conquered!`);
+
+		PlayLocalSound('Sound\\Interface\\Rescue.flac', who);
+
 	}
 
 	public reset() {

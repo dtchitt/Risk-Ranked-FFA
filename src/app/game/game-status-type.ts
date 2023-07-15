@@ -1,5 +1,5 @@
-import { MapPlayer, Unit } from "w3ts";
-import { Players } from "w3ts/globals";
+import { MapPlayer, Unit } from 'w3ts';
+import { Players } from 'w3ts/globals';
 
 export class GameStatus {
 	private static instance: GameStatus;
@@ -11,14 +11,14 @@ export class GameStatus {
 	private constructor() {
 		let humanPlayer: MapPlayer;
 
-		Players.every(p => {
+		Players.every((p) => {
 			if (p.slotState == PLAYER_SLOT_STATE_PLAYING && p.controller == MAP_CONTROL_USER) {
 				humanPlayer = p;
 				return false;
 			}
-		})
+		});
 
-		const dummy: Unit = new Unit(humanPlayer, FourCC('hfoo'), 0.00, 0.00, 270);
+		const dummy: Unit = new Unit(humanPlayer, FourCC('hfoo'), 0.0, 0.0, 270);
 		dummy.select(true);
 
 		const selected = dummy.isSelected(humanPlayer);
@@ -51,10 +51,10 @@ export class GameStatus {
 
 		switch (this.status) {
 			case 0:
-				result = "ONLINE";
+				result = 'ONLINE';
 				break;
 			case 1:
-				result = "OFFLINE";
+				result = 'OFFLINE';
 				break;
 			case 2:
 				result = `REPLAY`;
@@ -64,6 +64,6 @@ export class GameStatus {
 				break;
 		}
 
-		return result
+		return result;
 	}
 }

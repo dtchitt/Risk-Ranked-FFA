@@ -1,11 +1,10 @@
-import { Game } from "app/game/game-type";
-import { addScriptHook, W3TS_HOOK } from "w3ts";
+import { Game } from 'app/game/game-type';
+import { addScriptHook, W3TS_HOOK } from 'w3ts';
 
 function tsMain() {
 	try {
 		Game.getInstance();
-	}
-	catch (e) {
+	} catch (e) {
 		print(e);
 	}
 }

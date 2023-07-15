@@ -28,4 +28,4 @@ export const AID = {
 	ALLOW_PINGS: FourCC('a055'),
 	BLOCK_PINGS: FourCC('a056'),
 	PING: FourCC('a057'),
-}
+};

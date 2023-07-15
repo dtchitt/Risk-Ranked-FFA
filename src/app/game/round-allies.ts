@@ -1,7 +1,7 @@
-import { GamePlayer } from "app/player/player-type";
-import { ErrorMessage } from "libs/utils";
-import { MAX_PLAYERS } from "resources/constants";
-import { RoundSettings } from "./settings-data";
+import { GamePlayer } from 'app/player/player-type';
+import { ErrorMessage } from 'libs/utils';
+import { MAX_PLAYERS } from 'resources/constants';
+import { RoundSettings } from './settings-data';
 
 //TODO: reset alliances on new round
 //TODO: free ally needs triggers that ally/unally on alliance change
@@ -51,9 +51,9 @@ export class Alliances {
 				if (this.isAllied(p1, p2)) {
 					try {
 						this.setAlliance(p1, p2, true);
-						this.setAlliance(p2, p1, true);	
+						this.setAlliance(p2, p1, true);
 					} catch (error) {
-						print(error)
+						print(error);
 					}
 				}
 
@@ -77,25 +77,25 @@ export class Alliances {
 	}
 
 	public changeTeamNumber(p1: player, team: number) {
-		SetPlayerTeam(p1, team)
+		SetPlayerTeam(p1, team);
 	}
 
 	public setAlliance(p1: player, p2: player, bool: boolean) {
 		if (this.alliesOf.has(p1) && RoundSettings.diplomancy == 3) {
 			if (this.alliesOf.get(p1).length > RoundSettings.allies) {
-				ErrorMessage(p1, "You have the max amount of allies!");
+				ErrorMessage(p1, 'You have the max amount of allies!');
 				return;
 			}
 		}
 
-		SetPlayerAlliance(p1, p2, ALLIANCE_PASSIVE, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_HELP_REQUEST, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_HELP_RESPONSE, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_XP, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_SPELLS, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_VISION, bool)
-		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_CONTROL, bool)
-		
+		SetPlayerAlliance(p1, p2, ALLIANCE_PASSIVE, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_HELP_REQUEST, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_HELP_RESPONSE, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_XP, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_SPELLS, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_VISION, bool);
+		SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_CONTROL, bool);
+
 		if (RoundSettings.promode) {
 			SetPlayerAlliance(p1, p2, ALLIANCE_SHARED_ADVANCED_CONTROL, bool);
 		}
@@ -116,7 +116,7 @@ export class Alliances {
 		if (!this.alliesOf.has(p1)) return;
 		if (this.alliesOf.get(p1).indexOf(p2) == -1) return;
 
-		this.alliesOf.get(p1).splice(this.alliesOf.get(p1).indexOf(p2), 1)
+		this.alliesOf.get(p1).splice(this.alliesOf.get(p1).indexOf(p2), 1);
 	}
 
 	public reset() {
@@ -147,18 +147,18 @@ export class Alliances {
 				if (GamePlayer.get(p1).income < GamePlayer.get(p2).income) return 1;
 				if (GamePlayer.get(p1).income > GamePlayer.get(p2).income) return -1;
 				return 0;
-			})
+			});
 
 			teamByIncome.set(teamNumber, this.getTeamIncome(teamNumber));
-		})
+		});
 
 		const sortedTeams = new Map([...teamByIncome.entries()].sort((a, b) => b[1] - a[1]));
 
 		sortedTeams.forEach((val, key) => {
-			this.team.get(key).forEach(player => {
+			this.team.get(key).forEach((player) => {
 				result.push(player);
-			})
-		})
+			});
+		});
 
 		this.leadingTeam = Alliances.getInstance().getPlayerTeam(result[0]);
 
@@ -167,18 +167,18 @@ export class Alliances {
 
 	public getTeamIncome(teamNum: number): number {
 		let result: number = 0;
-		this.team.get(teamNum).forEach(player => {
+		this.team.get(teamNum).forEach((player) => {
 			result += GamePlayer.get(player).income;
-		})
+		});
 
 		return result;
 	}
 
 	public getTeamCities(teamNum: number): number {
 		let result: number = 0;
-		this.team.get(teamNum).forEach(player => {
+		this.team.get(teamNum).forEach((player) => {
 			result += GamePlayer.get(player).cities.length;
-		})
+		});
 
 		return result;
 	}

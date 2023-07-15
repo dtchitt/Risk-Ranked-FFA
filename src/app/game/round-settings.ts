@@ -1,8 +1,8 @@
-import { GamePlayer } from "app/player/player-type";
-import { UserInterface } from "app/ui/user-interface-type";
-import { UID } from "resources/unitID";
-import { Alliances } from "./round-allies";
-import { RoundSettings } from "./settings-data";
+import { GamePlayer } from 'app/player/player-type';
+import { UserInterface } from 'app/ui/user-interface-type';
+import { UID } from 'resources/unitID';
+import { Alliances } from './round-allies';
+import { RoundSettings } from './settings-data';
 
 export class Settings {
 	private static instance: Settings;
@@ -23,7 +23,7 @@ export class Settings {
 		return this.instance;
 	}
 
-	constructor() { }
+	constructor() {}
 
 	/**
 	 * processSettings
@@ -47,11 +47,9 @@ export class Settings {
 		//TODO: I can turn the win condition into a function member of the Round class. This can be used to define the function
 		switch (this.gameType) {
 			case 1:
-
 				break;
 
 			case 2:
-
 				break;
 
 			default: //Conquest
@@ -75,7 +73,7 @@ export class Settings {
 				break;
 
 			case 2: //Random Teams
-				Alliances.getInstance().unAllyLobby()
+				Alliances.getInstance().unAllyLobby();
 				SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true);
 				Alliances.teamGame = true;
 				//TODO: Create random teams based off allies number
@@ -87,7 +85,7 @@ export class Settings {
 
 				break;
 			default: //FFA
-				Alliances.getInstance().unAllyLobby()
+				Alliances.getInstance().unAllyLobby();
 				UserInterface.ffaSetup();
 				SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true);
 				break;
@@ -115,16 +113,16 @@ export class Settings {
 	 */
 	public fogSetup() {
 		switch (this.fog) {
-			case 1://Fog On
-				GamePlayer.fromPlayer.forEach(player => {
+			case 1: //Fog On
+				GamePlayer.fromPlayer.forEach((player) => {
 					if (player.isAlive() || player.isPlaying()) FogModifierStop(player.fog);
-				})
+				});
 				break;
 			case 2:
-			default://Fog Off
-				GamePlayer.fromPlayer.forEach(player => {
+			default: //Fog Off
+				GamePlayer.fromPlayer.forEach((player) => {
 					if (player.isAlive() || player.isPlaying()) FogModifierStart(player.fog);
-				})
+				});
 				break;
 		}
 
@@ -137,25 +135,10 @@ export class Settings {
 	private nomadSetup() {
 		switch (this.nomad) {
 			case 1:
-				this.nomad = 90;
-				break;
-			case 2:
-				this.nomad = 120;
-				break;
-			case 3:
-				this.nomad = 150;
-				break;
-			case 4:
-				this.nomad = 180;
-				break;
-			case 5:
-				this.nomad = 0; //Unlimited Time
-				break;
-			case 6:
-				this.nomad = -1; //Insta Death
+				this.nomad = 1;
 				break;
 			default:
-				this.nomad = 60;
+				this.nomad = 0;
 				break;
 		}
 
@@ -182,14 +165,14 @@ export class Settings {
 	private shipsSetup() {
 		switch (this.ships) {
 			case 1: //Transport only
-				GamePlayer.fromPlayer.forEach(gPlayer => {
+				GamePlayer.fromPlayer.forEach((gPlayer) => {
 					SetPlayerTechMaxAllowed(gPlayer.player, UID.BATTLESHIP_SS, 0);
 					SetPlayerTechMaxAllowed(gPlayer.player, UID.WARSHIP_A, 0);
-                    SetPlayerTechMaxAllowed(gPlayer.player, UID.WARSHIP_B, 0);
+					SetPlayerTechMaxAllowed(gPlayer.player, UID.WARSHIP_B, 0);
 				});
 				break;
 			case 2: //No SS
-				GamePlayer.fromPlayer.forEach(gPlayer => {
+				GamePlayer.fromPlayer.forEach((gPlayer) => {
 					SetPlayerTechMaxAllowed(gPlayer.player, UID.BATTLESHIP_SS, 0);
 				});
 				break;
@@ -205,7 +188,7 @@ export class Settings {
 	 */
 	private transportSetup() {
 		if (this.transport == 1) {
-			RoundSettings.transport = false
+			RoundSettings.transport = false;
 		} else {
 			RoundSettings.transport = true;
 		}

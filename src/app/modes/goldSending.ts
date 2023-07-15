@@ -1,4 +1,1 @@
-export const GoldSending = [
-    "Off",
-    "On"
-];
+export const GoldSending = ['Off', 'On'];
