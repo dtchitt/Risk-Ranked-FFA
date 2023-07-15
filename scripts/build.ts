@@ -109,7 +109,7 @@ function updateStrings(wtsDir: string | undefined, w3iDir: string | undefined, v
 	w3i.load(w3iBuffer);
 	wts.load(wtsBuffer);
 
-	w3i.name = `|cffffcc00Risk Europe ${verNum}|r`;
+	w3i.name = `|cffffcc00Risk Asia ${verNum}|r`;
 
 	w3iBuffer = w3i.save();
 	fs.writeFileSync(w3iDir, toBuffer(w3iBuffer));
