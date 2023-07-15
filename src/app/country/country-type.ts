@@ -103,7 +103,7 @@ export class Country {
 		Country.fromName.set("West Kazakhstan", new Country("West Kazakhstan", -10053.5, 12856.75, Cities[163], Cities[164], Cities[165], Cities[166]))
 		Country.fromName.set("Uzbekistan", new Country("Uzbekistan", -7889.0, 8761.0, Cities[152], Cities[153], Cities[154]))
 		Country.fromName.set("South Russia", new Country("South Russia", -12742.25, 11830.0, Cities[135], Cities[136], Cities[167]))
-
+		Country.fromName.set("Hainan (China)", new Country("Hainan (China)", 6717.5, -1609.75, Cities[168]))
 	}
 
 	//Public API

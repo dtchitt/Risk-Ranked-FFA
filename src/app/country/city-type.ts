@@ -352,6 +352,8 @@ export class City {
 		Cities[165] = new City(-9216.0, 13312.0, UID.CITY)
 		Cities[166] = new City(-10944.0, 13376.0, UID.CITY)
 
+		//Hainan (China)
+		Cities[168] = new City(7136.0, -1504.0, UID.PORT)
 
 		this.onEnter();
 		this.onLeave();
