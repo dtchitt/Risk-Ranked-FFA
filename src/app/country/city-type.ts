@@ -1,10 +1,10 @@
-import { Transports } from "app/transports-type";
 import { NEUTRAL_HOSTILE } from "resources/constants";
 import { UID } from "resources/unitID";
 import { UTYPE } from "resources/unitTypes";
 import { FilterFriendlyValidGuards, FilterOwnedGuards, isGuardValid } from "./guard-filters";
 import { compareValue } from "./guard-options";
 import { File } from "w3ts";
+import { TransportManager } from "app/transports/transport-manager";
 
 export const Cities: City[] = [];
 export const CityRegionSize: number = 185;
