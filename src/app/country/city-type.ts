@@ -330,7 +330,7 @@ export class City {
 		Cities[14] = new City(-6528.0, 6976.0, UID.CITY)
 		Cities[15] = new City(-5120.0, 6976.0, UID.CITY)
 
-		//Kazakhstan
+		//East Kazakhstan
 		Cities[16] = new City(-5888.0, 9920.0, UID.CITY)
 		Cities[17] = new City(-3520.0, 10240.0, UID.CITY)
 		Cities[155] = new City(-5248.0, 11712.0, UID.CITY)
@@ -347,7 +347,7 @@ export class City {
 		Cities[162] = new City(-10752.0, 10880.0, UID.CITY)
 
 		//West Kazakhstan
-		Cities[163] = new City(-9792.0, 11904.0, UID.CITY)
+		//Cities[163] = new City(-9792.0, 11904.0, UID.CITY)
 		Cities[164] = new City(-8320.0, 12160.0, UID.CITY)
 		Cities[165] = new City(-9216.0, 13312.0, UID.CITY)
 		Cities[166] = new City(-10944.0, 13376.0, UID.CITY)
