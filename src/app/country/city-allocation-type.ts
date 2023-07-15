@@ -37,7 +37,6 @@ export class CityAllocation {
 				}
 
 				if (gPlayer.cities.length < citiesMax) {
-					MessageAll(true, `Cities Max: ${citiesMax}` + `Cities Length: ${gPlayer.cities.length}`)
 					playerPool.push(gPlayer.player)
 				}
 			}
