@@ -1,6 +1,39 @@
 function InitGlobals()
 end
 
+function CreateBuildingsForPlayer0()
+local p = Player(0)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 4352.0, -5248.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 3584.0, -2880.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 6272.0, -3712.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 4544.0, -2304.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 5248.0, -384.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 5504.0, -1536.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 4736.0, -3904.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 1664.0, 3392.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), -2560.0, 4544.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), -1152.0, 4928.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), -1344.0, 3328.0, 270.000, FourCC("h000"))
+u = BlzCreateUnitWithSkin(p, FourCC("h000"), 192.0, 3712.0, 270.000, FourCC("h000"))
+end
+
+function CreatePlayerBuildings()
+CreateBuildingsForPlayer0()
+end
+
+function CreatePlayerUnits()
+end
+
+function CreateAllUnits()
+CreatePlayerBuildings()
+CreatePlayerUnits()
+end
+
 function InitCustomPlayerSlots()
 SetPlayerStartLocation(Player(0), 0)
 ForcePlayerStartLocation(Player(0), 0)
@@ -708,6 +741,7 @@ NewSoundEnvironment("Default")
 SetAmbientDaySound("AshenvaleDay")
 SetAmbientNightSound("AshenvaleNight")
 SetMapMusic("Music", true, 0)
+CreateAllUnits()
 InitBlizzard()
 InitGlobals()
 end
