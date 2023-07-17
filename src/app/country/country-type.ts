@@ -78,7 +78,6 @@ export class Country {
 		Country.fromName.set("Northeast China", new Country("Northeast China", 8760.75, 12855.75, Cities[79], Cities[80], Cities[81], Cities[82]))
 		Country.fromName.set("Inner Mongolia (China)", new Country("Inner Mongolia (China)", 3769.0, 7989.0, Cities[83], Cities[84], Cities[85], Cities[86]))
 		Country.fromName.set("Mongolia", new Country("Mongolia", 3641.25, 12089.0, Cities[87], Cities[88], Cities[89], Cities[90]))
-		Country.fromName.set("Central Russia", new Country("Central Russia", 2877.75, 15294.25, Cities[91], Cities[92], Cities[93]))
 		Country.fromName.set("South India", new Country("South India", -4164.5, -4932.75, Cities[94], Cities[95], Cities[96]))
 		Country.fromName.set("Sri Lanka", new Country("Sri Lanka", -2887.75, -10440.25, Cities[97], Cities[98]))
 		Country.fromName.set("Central India", new Country("Central India", -3655.0, -1997.0, Cities[99], Cities[100], Cities[101], Cities[102]))
@@ -88,9 +87,7 @@ export class Country {
 		Country.fromName.set("Central China", new Country("Central China", 2104.25, 5563.0, Cities[117], Cities[118], Cities[119], Cities[120]))
 		Country.fromName.set("Pakistan", new Country("Pakistan", -6990.0, 1980.25, Cities[121], Cities[122], Cities[123], Cities[124], Cities[125]))
 		Country.fromName.set("Iran", new Country("Iran", -11459.25, 4539.25, Cities[126], Cities[127], Cities[128], Cities[129], Cities[130]))
-		Country.fromName.set("Azerbaijan", new Country("Azerbaijan", -12360.25, 8247.75, Cities[131], Cities[132]))
-		Country.fromName.set("Armenia", new Country("Armenia", -13511.25, 8640.5, Cities[133]))
-		Country.fromName.set("Georgia", new Country("Georgia", -13131.0, 9282.0, Cities[134]))
+		Country.fromName.set("Azerbaijan", new Country("Azerbaijan", -12739.75, 8506.0, Cities[131], Cities[132], Cities[133]))
 		Country.fromName.set("Yemen", new Country("Yemen", -13382.75, -2500.0, Cities[137], Cities[138]))
 		Country.fromName.set("Oman", new Country("Oman", -10949.0, -1476.0, Cities[139], Cities[140]))
 		Country.fromName.set("Saudi Arabia", new Country("Saudi Arabia", -12746.25, -838.0, Cities[141], Cities[142], Cities[143]))
@@ -105,6 +102,11 @@ export class Country {
 		Country.fromName.set("Uzbekistan", new Country("Uzbekistan", -7889.0, 8761.0, Cities[152], Cities[153], Cities[154]))
 		Country.fromName.set("South Russia", new Country("South Russia", -12742.25, 11830.0, Cities[135], Cities[136], Cities[167]))
 		Country.fromName.set("Hainan (China)", new Country("Hainan (China)", 6717.5, -1609.75, Cities[168]))
+		Country.fromName.set("Volga (Russia)", new Country("Volga (Russia)", -12995.75, 15413.25, Cities[169], Cities[170], Cities[171]))
+		Country.fromName.set("Central Russia", new Country("Central Russia", -6597.75, 15288.5, Cities[175], Cities[176], Cities[177]))
+		Country.fromName.set("Siberia (Russia)", new Country("Siberia (Russia)", -458.25, 14905.5, Cities[178], Cities[179], Cities[180]))
+		Country.fromName.set("Eastern Russia", new Country("Eastern Russia", 4155.5, 15165.0, Cities[181], Cities[182], Cities[183]))
+		Country.fromName.set("Ural (Russia)", new Country("Ural (Russia)", -10181.0, 15799.25))
 	}
 
 	//Public API
