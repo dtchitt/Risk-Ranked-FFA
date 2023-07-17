@@ -12,7 +12,7 @@ function tsMain() {
 addScriptHook(W3TS_HOOK.MAIN_AFTER, tsMain);
 
 function fixMapName() {
-	SetMapName('Risk Europe');
+	SetMapName("Risk Asia");
 }
 
 addScriptHook(W3TS_HOOK.CONFIG_AFTER, fixMapName);

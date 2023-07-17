@@ -1,9 +1,10 @@
-import { RoundSettings } from 'app/game/settings-data';
-import { GamePlayer } from 'app/player/player-type';
-import { Util } from 'libs/translators';
-import { NEUTRAL_HOSTILE } from 'resources/constants';
-import { City } from './city-type';
-import { Country } from './country-type';
+import { RoundSettings } from "app/game/settings-data";
+import { GamePlayer } from "app/player/player-type";
+import { Util } from "libs/translators";
+import { NEUTRAL_HOSTILE } from "resources/constants";
+import { City } from "./city-type";
+import { Country } from "./country-type";
+import { MessageAll } from "libs/utils";
 
 export class CityAllocation {
 	constructor() {}
@@ -29,13 +30,11 @@ export class CityAllocation {
 					do {
 						city = this.getCityFromPool(cityPool);
 						country = Country.fromCity.get(city);
-
-						if (city == null) print(`Error in CityAllocation, No cities avaiable in pool`);
-						if (counter >= 50) print(`Error in CityAllocation, No valid city found in pool`);
-
 						counter++;
-					} while (country.citiesOwned.get(gPlayer) >= country.allocLim || counter == 50 || city == null);
+					} while (country.citiesOwned.get(gPlayer) >= country.allocLim && counter < 50 && city != null);
 
+					if (city == null) print(`Error in CityAllocation, No cities avaiable in pool`)
+					if (counter >= 50) print(`Error in CityAllocation, No valid city found in pool`)
 					CityAllocation.changeOwner(city, gPlayer, cityPool);
 				}
 

@@ -67,6 +67,7 @@ export const CommandProcessor = () => {
 						I2S(CamSettings.DEFAULT_ROTATION),
 					]);
 
+
 					if (GetLocalPlayer() == gPlayer.player) {
 						File.write(
 							'camSettings.pld',
@@ -75,6 +76,7 @@ export const CommandProcessor = () => {
 					}
 
 					break;
+
 
 				case '-forfeit':
 				case '-ff':
