@@ -231,8 +231,8 @@ export class City {
 		Cities[96] = new City(-4032.0, -7680.0, UID.CITY)
 
 		//Sri Lanka
-		Cities[97] = new City(-3200.0, -9728.0, UID.CITY)
-		Cities[98] = new City(-2112.0, -10688.0, UID.CITY)
+		Cities[97] = new City(-2208.0, -10976.0, UID.CITY)
+		Cities[98] = new City(-3072.0, -9664.0, UID.CITY)
 
 		//Central India
 		Cities[99] = new City(-4992.0, -3008.0, UID.CITY)
@@ -243,7 +243,6 @@ export class City {
 		//West India
 		Cities[103] = new City(-6720.0, -704.0, UID.CITY)
 		Cities[104] = new City(-5312.0, 832.0, UID.CITY)
-		Cities[105] = new City(-6560.0, -2272.0, UID.PORT)
 
 		//North India
 		Cities[106] = new City(-4736.0, 2176.0, UID.CITY)

@@ -79,9 +79,8 @@ export class Country {
 		Country.fromName.set("Inner Mongolia (China)", new Country("Inner Mongolia (China)", 3769.0, 7989.0, Cities[83], Cities[84], Cities[85], Cities[86]))
 		Country.fromName.set("Mongolia", new Country("Mongolia", 3641.25, 12089.0, Cities[87], Cities[88], Cities[89], Cities[90]))
 		Country.fromName.set("South India", new Country("South India", -4164.5, -4932.75, Cities[94], Cities[95], Cities[96]))
-		Country.fromName.set("Sri Lanka", new Country("Sri Lanka", -2887.75, -10440.25, Cities[97], Cities[98]))
 		Country.fromName.set("Central India", new Country("Central India", -3655.0, -1997.0, Cities[99], Cities[100], Cities[101], Cities[102]))
-		Country.fromName.set("West India", new Country("West India", -5953.0, 57.75, Cities[103], Cities[104], Cities[105]))
+		Country.fromName.set("West India", new Country("West India", -5953.0, 57.75, Cities[103], Cities[104]))
 		Country.fromName.set("North India", new Country("North India", -4166.0, 3136.75, Cities[106], Cities[107], Cities[108]))
 		Country.fromName.set("East China", new Country("East China", 6449.5, 3382.25, Cities[109], Cities[110], Cities[111], Cities[112], Cities[113], Cities[114], Cities[115], Cities[116]))
 		Country.fromName.set("Central China", new Country("Central China", 2104.25, 5563.0, Cities[117], Cities[118], Cities[119], Cities[120]))
@@ -106,7 +105,8 @@ export class Country {
 		Country.fromName.set("Central Russia", new Country("Central Russia", -6597.75, 15288.5, Cities[175], Cities[176], Cities[177]))
 		Country.fromName.set("Siberia (Russia)", new Country("Siberia (Russia)", -458.25, 14905.5, Cities[178], Cities[179], Cities[180]))
 		Country.fromName.set("Eastern Russia", new Country("Eastern Russia", 4155.5, 15165.0, Cities[181], Cities[182], Cities[183]))
-		Country.fromName.set("Ural (Russia)", new Country("Ural (Russia)", -10181.0, 15799.25))
+		Country.fromName.set("Ural (Russia)", new Country("Ural (Russia)", -10181.0, 15799.25, Cities[171], Cities[172], Cities[173]))
+		Country.fromName.set("Sri Lanka", new Country("Sri Lanka", -2755.75, -10307.75, Cities[97], Cities[98]))
 	}
 
 	//Public API
