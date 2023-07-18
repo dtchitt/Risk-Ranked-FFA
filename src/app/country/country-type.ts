@@ -52,13 +52,8 @@ export class Country {
 		Country.fromName.set("Brunei", new Country("Brunei", 8633.0, -9796.0, Cities[13]))
 		Country.fromName.set("Lower Indonesia", new Country("Lower Indonesia", 7995.0, -15559.0, Cities[18], Cities[19]))
 		Country.fromName.set("West Indonesia", new Country("West Indonesia", 4539.0, -12359.0, Cities[20], Cities[21], Cities[22]))
-		Country.fromName.set("South Vietnam", new Country("South Vietnam", 6976.5, -5567.0, Cities[23], Cities[24]))
-		Country.fromName.set("North Vietnam", new Country("North Vietnam", 5691.5, -824.0, Cities[25], Cities[26]))
+		Country.fromName.set("Vietnam", new Country("Vietnam", 5691.5, -824.0, Cities[25], Cities[26]))
 		Country.fromName.set("Laos", new Country("Laos", 4537.5, -1595.75, Cities[27], Cities[28], Cities[29]))
-		Country.fromName.set("Cambodia", new Country("Cambodia", 5823.25, -5836.0, Cities[30], Cities[31]))
-		Country.fromName.set("Thailand", new Country("Thailand", 4924.0, -4677.5, Cities[32], Cities[33], Cities[34]))
-		Country.fromName.set("Myanmar (Burma)", new Country("Myanmar (Burma)", 2359.5, -2615.0, Cities[35], Cities[36], Cities[37], Cities[38]))
-		Country.fromName.set("Bangladesh", new Country("Bangladesh", -71.75, -578.0, Cities[39], Cities[40]))
 		Country.fromName.set("Bhutan", new Country("Bhutan", 56.5, 953.5, Cities[41]))
 		Country.fromName.set("Northeast India", new Country("Northeast India", 1342.0, 1212.75, Cities[42], Cities[43]))
 		Country.fromName.set("Nepal", new Country("Nepal", -1994.0, 1087.75, Cities[44], Cities[45]))
@@ -107,6 +102,10 @@ export class Country {
 		Country.fromName.set("Eastern Russia", new Country("Eastern Russia", 4155.5, 15165.0, Cities[181], Cities[182], Cities[183]))
 		Country.fromName.set("Ural (Russia)", new Country("Ural (Russia)", -10181.0, 15799.25, Cities[171], Cities[172], Cities[173]))
 		Country.fromName.set("Sri Lanka", new Country("Sri Lanka", -2755.75, -10307.75, Cities[97], Cities[98]))
+		Country.fromName.set("Cambodia", new Country("Cambodia", 5823.25, -5836.0, Cities[184], Cities[185], Cities[186], Cities[187]))
+		Country.fromName.set("Thailand", new Country("Thailand", 4924.0, -4677.5))
+		Country.fromName.set("Myanmar", new Country("Myanmar", 2489.25, -1988.25))
+		Country.fromName.set("Bangladesh", new Country("Bangladesh", 56.5, -840.5))
 	}
 
 	//Public API

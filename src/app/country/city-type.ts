@@ -114,32 +114,6 @@ export class City {
 		Cities[20] = new City(5824.0, -13760.0, UID.CITY)
 		Cities[21] = new City(4032.0, -11328.0, UID.CITY)
 
-		//South Vietnam
-		Cities[23] = new City(6592.0, -6016.0, UID.CITY)
-		Cities[24] = new City(7104.0, -4864.0, UID.CITY)
-		//North Vietnam
-		Cities[25] = new City(5696.0, -2240.0, UID.CITY)
-		Cities[26] = new City(5440.0, -256.0, UID.CITY)
-		//Laos
-		Cities[27] = new City(6144.0, -3712.0, UID.CITY)
-		Cities[28] = new City(4416.0, -2496.0, UID.CITY)
-		Cities[29] = new City(4480.0, -1088.0, UID.CITY)
-		//Cambodia
-		Cities[30] = new City(5344.0, -6688.0, UID.PORT)
-		Cities[31] = new City(5888.0, -5376.0, UID.CITY)
-		//Thailand
-		Cities[32] = new City(4032.0, -4928.0, UID.CITY)
-		Cities[33] = new City(4608.0, -3776.0, UID.CITY)
-		Cities[34] = new City(3264.0, -2944.0, UID.CITY)
-		//Myanmar (Burma)
-		Cities[35] = new City(2176.0, -3584.0, UID.CITY)
-		Cities[36] = new City(2112.0, -1728.0, UID.CITY)
-		Cities[37] = new City(3136.0, -832.0, UID.CITY)
-		Cities[38] = new City(1920.0, -256.0, UID.CITY)
-
-		//Bangladesh
-		Cities[39] = new City(-512.0, 128.0, UID.CITY)
-		Cities[40] = new City(288.0, -1376.0, UID.PORT)
 		//Bhutan
 		Cities[41] = new City(0.0, 1408.0, UID.CITY)
 		//North East India
@@ -148,7 +122,7 @@ export class City {
 		//Nepal
 		Cities[44] = new City(-2432.0, 1664.0, UID.CITY)
 		Cities[45] = new City(-1344.0, 1088.0, UID.CITY)
-
+		1600.0
 		//Tibet (China)
 		Cities[46] = new City(-2496.0, 4416.0, UID.CITY)
 		Cities[47] = new City(-1024.0, 3008.0, UID.CITY)
@@ -373,6 +347,34 @@ export class City {
 		Cities[181] = new City(3072.0, 14720.0, UID.CITY)
 		Cities[182] = new City(3904.0, 15936.0, UID.CITY)
 		Cities[183] = new City(5184.0, 15488.0, UID.CITY)
+
+		//Cambodia
+		Cities[184] = new City(5344.0, -6688.0, UID.PORT)
+		Cities[185] = new City(5888.0, -5376.0, UID.CITY)
+		Cities[186] = new City(6592.0, -6016.0, UID.CITY)
+		Cities[187] = new City(7104.0, -4864.0, UID.CITY)
+
+		//Thailand
+		Cities[188] = new City(4352.0, -5248.0, UID.CITY)
+		Cities[189] = new City(4736.0, -3904.0, UID.CITY)
+		Cities[190] = new City(3584.0, -2880.0, UID.CITY)
+
+		//Myanmar
+		Cities[191] = new City(2112.0, -2624.0, UID.CITY)
+		Cities[193] = new City(1984.0, -704.0, UID.CITY)
+		Cities[194] = new City(3008.0, -960.0, UID.CITY)
+
+		//Bangladesh
+		Cities[195] = new City(288.0, -1440.0, UID.CITY)
+		Cities[196] = new City(-192.0, -320.0, UID.CITY)
+
+		//Vietnam
+		Cities[0] = new City(5504.0, -1536.0, UID.CITY)
+		Cities[0] = new City(5248.0, -384.0, UID.CITY)
+
+		//Laos
+		Cities[0] = new City(6272.0, -3712.0, UID.CITY)
+		Cities[0] = new City(4736.0, -2368.0, UID.CITY)
 
 		this.onEnter();
 		this.onLeave();
